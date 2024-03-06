@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+@font-face {
+  font-family: kei;
+  src: url(font/keifont.ttf);
+}
+@font-face {
+  font-family: kt;
+  src: url(font/kt.ttf);
+}
+
 @keyframes downIn {
   0% {
     transform: translateY(100px);
@@ -28,29 +37,15 @@
   }
 }
 
-@font-face {
-  font-family: kt;
-  src: url(font/kt.ttf);
-}
-
-div {
-  font-family: kt;
+body {
+  animation: downIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
 }
 
 img {
-  position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-
-h1 {
-  margin-left: 40%;
-  margin-top: -20%;
-  font-size: 300%;
 }
 
 a {
@@ -58,125 +53,24 @@ a {
   color: #000;
 }
 
-.feed {
-  animation: downIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
-}
-
-.sqr {
-  margin: auto;
-  margin-top: 10%;
-  width: 910px;
-  height: 550px;
-  border: solid 9px #fff;
-  border-radius: 30px;
-  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.2);
-}
-
-.name {
-  margin-left: 28%;
-  margin-top: -5%;
-  font-size: 550%;
-}
-
-.id {
-  margin-left: 45%;
-  margin-top: -12%;
-  font-size: 350%;
-  color: #8bdaff;
-}
-
-.icon1 {
-  position: relative;
-  margin-left: 30%;
-  top: -13.5%;
-  font-size: 350%;
-}
-.icon1:hover::after {
-  opacity: 0.8;
-  content: "Shicoku_";
-  font-size: 70%;
-  animation: hover 1s cubic-bezier(0.1, 1, 0.1, 1) 1 forwards;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background: #23e5ec;
-  transition: all 0.1s;
-  transform: scale(0, 1);
-  transform-origin: left top;
-}
-.icon2 {
-  position: relative;
-  margin-left: 1%;
-  top: -13.5%;
-  font-size: 350%;
-}
-.icon2:hover::after {
-  opacity: 0.8;
-  content: "H2DH8K";
-  font-size: 70%;
-  animation: hover 1s cubic-bezier(0.1, 1, 0.1, 1) 1 forwards;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background: #23e5ec;
-  transition: all 0.1s;
-  transform: scale(0, 1);
-  transform-origin: left top;
-}
-
-.dis:hover::after {
-  opacity: 0.8;
-  content: "Shicoku";
-  font-size: 70%;
-  animation: hover 1s cubic-bezier(0.1, 1, 0.1, 1) 1 forwards;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background: #2f006d;
-  transition: all 0.1s;
-  transform: scale(0, 1);
-  transform-origin: left top;
-}
-.git:hover::after {
-  opacity: 0.8;
-  content: "Shicoku";
-  font-size: 60%;
-  animation: hover 1s cubic-bezier(0.1, 1, 0.1, 1) 1 forwards;
-  position: absolute;
-  bottom: 0;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background: #000000;
-  transition: all 0.1s;
-  transform: scale(0, 1);
-  transform-origin: left top;
-}
-
-.comment {
-  margin-left: 5%;
-  margin-top: -4%;
-  font-size: 330%;
-}
-
-.btn {
-  margin-left: 70%;
-  top: -25%;
-  border: 2px solid #000000;
-  border-radius: 50px;
-  font-size: 230%;
+.left {
   display: inline-block;
-  padding: 20px 50px;
-  position: relative;
+  vertical-align: top;
+}
 
+.back-btn {
+  font-family: kt;
   color: #000000;
   overflow: hidden;
+
+  border: 2px solid #000000;
+  border-radius: 100px;
+  font-size: 20px;
+  display: inline-block;
+  padding: 20px 30px;
+  margin: 20px 0;
+  position: relative;
+
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -186,7 +80,7 @@ a {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
-.btn:before {
+.back-btn:before {
   content: "";
   z-index: -1;
   position: absolute;
@@ -199,17 +93,172 @@ a {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.btn:hover {
+.back-btn:hover {
   color: #ecf0f1;
 }
-.btn:hover:before {
+.back-btn:hover:before {
   left: 0;
 }
 
-.copy {
+.about-btn {
+  margin-top: -95px;
+  margin-left: 90px;
+}
+
+.btn {
+  font-family: none;
+  font-size: 60px;
+  border: 5px solid #00000000;
+  border-radius: 20px;
+  padding: 10px;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.btn:hover {
+  border: 5px solid #000000;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.breadcrumb {
+  list-style: none;
+  overflow: hidden;
+  font: 12px Helvetica, Arial, Sans-Serif;
+}
+.breadcrumb li {
+  float: left;
+}
+.breadcrumb li a {
+  font-family: kei;
+  font-size: 20px;
+  margin-top: -3px;
+  text-decoration: none;
+  padding: 10px 0 15px 55px;
+  background: rgb(85, 221, 255);
+  width: 19px;
+  height: 15px;
   position: relative;
-  margin-left: 5%;
-  top: -25%;
+  display: block;
+  float: left;
+}
+
+.breadcrumb li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 30px solid rgb(85, 221, 255);
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 100%;
+  z-index: 2;
+}
+
+.breadcrumb li a:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 35px solid white;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  margin-left: 1px;
+  left: 100%;
+  z-index: 1;
+}
+
+.breadcrumb li:first-child a {
+  padding-left: 10px;
+}
+.breadcrumb li:nth-child(2) a {
+  background: rgb(223, 223, 223);
+  width: 150px;
+}
+.breadcrumb li:nth-child(2) a:after {
+  border-left-color: rgba(190, 190, 190, 0);
+}
+
+.card-img {
+  margin-top: 10%;
+  width: 20vw;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.card-img:hover {
+  background-color: black;
+  opacity: 0.7;
+}
+
+h1 {
+  margin-top: 5%;
+  margin-left: 20px;
+  font-size: 3.8rem;
+}
+
+.under {
+  border-bottom: 2px solid;
+  width: 1890px;
+}
+
+.card-txt {
+  font-family: kei;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.card-body div {
+  margin-top: 10px;
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.card-txt-page:hover {
+  color: #000;
+  opacity: 0.5;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: rgba(27, 173, 179, 0.425);
+}
+
+.here {
+  color: rgb(85, 221, 255);
+  opacity: 0.4;
+}
+
+.here:hover {
+  border: 5px solid rgb(85, 221, 255);
+  opacity: 0.4;
+}
+
+.copy {
+  margin-top: 20px;
+  margin-left: 30px;
+  font-size: 130%;
+  font-family: kt;
+}
+
+.mrg {
+  margin-left: 60px;
+}
+.mrg2 {
+  margin-left: 197px;
 }
 
 .red {
@@ -217,9 +266,21 @@ a {
 }
 
 @media screen and (max-width: 480px) {
-  .pc {
-    /* display: none; */
-    transform: scale(0.45, 0.45);
-    margin-left: -150px;
+  .card-img {
+    width: 80vw;
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+
+  .under {
+    margin-left: -2%;
+    border-bottom: 2px solid;
+    width: 360px;
+  }
+
+  .card-txt {
+    font-family: kei;
+    font-size: 20px;
+    margin-left: 30px;
   }
 }

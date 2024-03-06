@@ -1,20 +1,35 @@
 @charset "UTF-8";
 
+div {
+  font-family: kei;
+}
+
 i {
-    font-size: 35px;
+  font-size: 35px;
+}
+
+p {
+  margin-left: 70px;
+  font-size: 1.4rem;
 }
 p a {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 p a:hover {
-    opacity: 0.5;
+  opacity: 0.5;
+}
+
+@media (min-width: 600px) {
+  .content {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    p {
-        margin-left: 10px;
-    }
-	p a {
-        margin-right: 20px;
-    }
+  /* p {
+    margin-left: 10px;
+  }
+  p a {
+    margin-right: 20px;
+  } */
 }
