@@ -166,10 +166,10 @@ h1 {
   top: -25%;
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   body {
     transform: scale(5, 5);
     position: absolute;
     top: 50%;
   }
-}
+} */

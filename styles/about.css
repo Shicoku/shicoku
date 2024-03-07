@@ -37,7 +37,7 @@ p {
   margin: 0.3em 0px;
   margin-left: 70px;
 }
-
+/* 
 @media screen and (max-width: 480px) {
   h1 {
     margin-left: 70px;
@@ -69,4 +69,4 @@ p {
   .mrg2 {
     margin-left: 0;
   }
-}
+} */

@@ -19,11 +19,11 @@ p a:hover {
   opacity: 0.5;
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .content {
     display: flex;
   }
-}
+} */
 
 @media screen and (max-width: 480px) {
   /* p {
