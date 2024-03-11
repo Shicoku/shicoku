@@ -284,4 +284,20 @@ h1 {
     font-size: 20px;
     margin-left: 30px;
   }
+
+  .about-btn {
+    transform: scale(0.8, 0.8);
+    margin-top: -140px;
+  }
+
+  .breadcrumb {
+    list-style: none;
+    overflow: hidden;
+    font: 12px Helvetica, Arial, Sans-Serif;
+    margin-left: -40px;
+  }
+
+  .card-img {
+    margin-left: -30px;
+  }
 }
