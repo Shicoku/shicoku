@@ -1,9 +1,37 @@
 @charset "UTF-8";
 
-div {
-  margin-left: 10px;
-}
-
 .cmt {
   font-family: kei;
+}
+
+.pass {
+  margin-top: 30px;
+  margin-left: 30px;
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 480px) {
+  .card-img {
+    margin-left: 20px;
+  }
+
+  .pass {
+    margin-top: -15px;
+    margin-left: 10px;
+    font-size: 1.3rem;
+  }
+
+  .name {
+    margin-top: 5px;
+  }
+
+  .summary {
+    margin-top: -40px;
+    font-size: 1.8rem;
+  }
+
+  .cmt {
+    margin-top: 5px;
+    font-size: 1.2rem;
+  }
 }

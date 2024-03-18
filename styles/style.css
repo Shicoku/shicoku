@@ -210,6 +210,7 @@ h1 {
 .under {
   border-bottom: 2px solid;
   width: 1890px;
+  margin-left: 10px;
 }
 
 .card-txt {
@@ -227,11 +228,6 @@ h1 {
 .card-txt-page:hover {
   color: #000;
   opacity: 0.5;
-}
-
-.link {
-  text-decoration: none;
-  color: black;
 }
 
 .link:hover {
@@ -267,16 +263,19 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
+  .under {
+    border-bottom: 2px solid;
+    width: 360px;
+  }
+
   .card-img {
     width: 80vw;
     border: 1px solid #000;
     border-radius: 10px;
   }
 
-  .under {
-    margin-left: -2%;
-    border-bottom: 2px solid;
-    width: 360px;
+  .card-body div {
+    margin-left: 50px;
   }
 
   .card-txt {
