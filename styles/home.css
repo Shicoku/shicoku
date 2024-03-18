@@ -167,9 +167,8 @@ h1 {
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    transform: scale(5, 5);
-    position: absolute;
-    top: 50%;
+  .size {
+    margin-left: -160px;
+    transform: scale(0.4, 0.4);
   }
 }
