@@ -10,7 +10,7 @@ img {
 
 p {
   margin-left: 70px;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .name {
@@ -43,20 +43,25 @@ p {
 
   p {
     margin-left: 20px;
+    font-size: 1.1rem;
   }
 
   .name {
     margin-top: -30px;
+    margin-left: 20px;
     font-size: 2.8rem;
   }
 
   .summary {
-    margin-top: -30px;
-    font-size: 1.4rem;
+    margin-top: -40px;
+    margin-left: 20px;
+    font-size: 1.6rem;
   }
 
   .cmt {
-    font-size: 1.3rem;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    width: 380px;
   }
 
   .profile p {
