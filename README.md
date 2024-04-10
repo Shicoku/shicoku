@@ -8,7 +8,7 @@
   </a>
 </p>
 
-<p align="left"> 
+<p align="left">
   <img alt="Top Langs" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shicoku&layout=compact&count_private=true&show_icons=true&show_icons=true&theme=onedark" />
   <img alt="github stats" height="150px" src="https://github-readme-stats.vercel.app/api?username=Shicoku&count_private=true&show_icons=true&show_icons=true&theme=onedark" />
 </p>
@@ -18,25 +18,3 @@
 <h1 align="center">Home Page Link</h1>
 
 https://shicoku.vercel.app/
-
-# Commit message
-
-- 形式
-
-```
-git commit -m "[<種別>]<変更内容の要約>"
-```
-
-| 種別     | 内容                              |
-| -------- | --------------------------------- |
-| feat     | 新規機能・ページの追加            |
-| fix      | バグ等の修正                      |
-| docs     | ドキュメントの更新                |
-| style    | スタイルに関する修正              |
-| refactor | リファクタリング 変数名の変更など |
-| test     | テストコードに関する開発          |
-| chore    | タスクの更新                      |
-
-- 引用
-
-https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
