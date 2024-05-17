@@ -20,7 +20,40 @@
     <title>Shicoku / シュー</title>
     <!--styles-->
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/form.css" />
     <!--scripts-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        // ここ変更します
+        emailjs.init("CwbY34lk5uV18tqtk");
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function () {
+        document.getElementById("form").addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          this.contact_number.value = (Math.random() * 100000) | 0;
+          // ここ変更します
+          let message = document.getElementById("message").value;
+
+          if (message == "") {
+            alert("メッセージが入力されていません");
+            return;
+          } else {
+            emailjs.sendForm("service_tvcd8ph", "template_knsvb2e", this).then(
+              function () {
+                alert("送信されました");
+              },
+              function (error) {
+                console.log("FAILED...", error);
+              }
+            );
+          }
+        });
+      };
+    </script>
     <script src="https://kit.fontawesome.com/4a6af072b1.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -53,6 +86,27 @@
           <a href="https://webdesignreference.fc2.net/" target="_blank" rel="noopener noreferrer" class="link"
             ><img src="./img/works_img/web.png" class="card-img" /><br /><span class="card-txt">WEBデザインリファレンス</span></a
           >
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <h1 class="title2">ご意見ご感想はこちら</h1>
+        <form id="form">
+          <input type="hidden" name="contact_number" />
+          <p>名前<br /><input type="text" name="name" class="txt" placeholder="必要な場合のみ記載。" /></p>
+          <p>内容<br /><textarea id="message" name="message" cols="28" rows="5" placeholder="個人情報は入力しないでください。"></textarea></p>
+          <p><input type="submit" value="内容を送信" class="formB" /></p>
+        </form>
+      </div>
+      <div class="hidden_box">
+        <label for="label" class="formB2"><a>利用規約</a></label>
+        <input type="checkbox" id="label" />
+        <div class="hidden_show">
+          <p>こちらのフォームは完全匿名のフォームです。</p>
+          <p>完全匿名となりますので、一切の個人情報の入力はご遠慮ください。</p>
+          <p>返信はできかねますのでご了承ください。</p>
+          <p>サイト利用時のご意見やご感想等ございましたらお願いします。 <br />率直な意見がほしいのですが、辛辣な言葉は控えていただけるとありがたいです。</p>
         </div>
       </div>
     </div>
