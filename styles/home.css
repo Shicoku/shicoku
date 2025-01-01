@@ -11,6 +11,29 @@
   }
 }
 
+body {
+  --color: #000;
+  --btn: #fff;
+  --sqr-main: #fff;
+  --sqr-shadow: rgba(0, 0, 0, 0.2);
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: #444;
+    color: #ddd;
+
+    --color: #ddd;
+    --btn: #444;
+    --sqr-main: #444;
+    --sqr-shadow: rgba(255, 255, 255, 0.2);
+  }
+
+  i {
+    color: #ddd;
+  }
+} */
+
 div {
   font-family: kt;
 }
@@ -32,9 +55,9 @@ h1 {
   margin-top: 10%;
   width: 910px;
   height: 550px;
-  border: solid 9px #fff;
+  border: solid 9px var(--sqr-main);
   border-radius: 50px;
-  box-shadow: 0 0px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 30px var(--sqr-shadow);
 }
 
 .name {
@@ -70,6 +93,7 @@ h1 {
   transition: all 0.1s;
   transform: scale(0, 1);
   transform-origin: left top;
+  color: var(--color);
 }
 .icon2 {
   position: relative;
@@ -91,6 +115,7 @@ h1 {
   transition: all 0.1s;
   transform: scale(0, 1);
   transform-origin: left top;
+  color: var(--color);
 }
 .dis:hover::after {
   opacity: 0.8;
@@ -106,6 +131,7 @@ h1 {
   transition: all 0.1s;
   transform: scale(0, 1);
   transform-origin: left top;
+  color: var(--color);
 }
 .git:hover::after {
   opacity: 0.8;
@@ -121,14 +147,15 @@ h1 {
   transition: all 0.1s;
   transform: scale(0, 1);
   transform-origin: left top;
+  color: var(--color);
 }
 
 .arrow {
   display: inline-block;
   width: 30px;
   height: 30px;
-  border-left: 4px solid black;
-  border-bottom: 4px solid black;
+  border-left: 4px solid var(--color);
+  border-bottom: 4px solid var(--color);
   transform: rotate(225deg);
 }
 .arrow:hover {
@@ -144,14 +171,14 @@ h1 {
 .more-btn {
   margin-left: 70%;
   top: -25%;
-  border: 2px solid #000000;
+  border: 2px solid var(--color);
   border-radius: 50px;
   font-size: 230%;
   display: inline-block;
   padding: 20px 50px;
   position: relative;
 
-  color: #000000;
+  color: var(--color);
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -170,13 +197,13 @@ h1 {
   height: 100%;
   top: 0;
   left: -100%;
-  background-color: #000000;
+  background-color: var(--color);
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .more-btn:hover {
-  color: #ecf0f1;
+  color: var(--btn);
 }
 .more-btn:hover:before {
   left: 0;
