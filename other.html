@@ -57,59 +57,80 @@
     <script src="https://kit.fontawesome.com/4a6af072b1.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <a href="./index.html" class="back-btn">←</a>
-    <div class="about-btn">
-      <a class="btn" href="./about.html">About</a>
-      <a class="btn" href="./works.html">Works</a>
-      <a class="btn here">Other</a>
-    </div>
-    <div>
-      <h1 class="title">クレジット</h1>
-      <div class="under"></div>
-      <div class="card-body">
-        <div class="card">
-          <a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" rel="noopener noreferrer" class="link"
-            ><img src="./img/works_img/keifont.png" class="card-img" /><br /><span class="card-txt">けいふぉんと</span></a
-          >
-        </div>
-        <div class="card">
-          <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer" class="link"
-            ><img src="./img/works_img/googlefonts.png" class="card-img" /><br /><span class="card-txt">Google Fonts</span></a
-          >
-        </div>
-        <div class="card">
-          <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer" class="link"
-            ><img src="./img/works_img/fontawesome.png" class="card-img" /><br /><span class="card-txt">FONT AWESOME</span></a
-          >
-        </div>
-        <div class="card">
-          <a href="https://webdesignreference.fc2.net/" target="_blank" rel="noopener noreferrer" class="link"
-            ><img src="./img/works_img/web.png" class="card-img" /><br /><span class="card-txt">WEBデザインリファレンス</span></a
-          >
+    <div class="margin">
+      <a href="./index.html" class="back-btn">←</a>
+      <div class="about-btn">
+        <a class="btn" href="./about.html">About</a>
+        <a class="btn" href="./works.html">Works</a>
+        <a class="btn here">Other</a>
+      </div>
+      <div class="menu">
+        <input type="checkbox" id="menu-btn-check" />
+        <div class="menu-bg"></div>
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+        <div class="menu-content">
+          <ul>
+            <li>
+              <a href="./about.html">About</a>
+            </li>
+            <li>
+              <a href="./works.html">Works</a>
+            </li>
+            <li>
+              <a href="#" class="here2">Other</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-    <div>
+
       <div>
-        <h1 class="title2">ご意見ご感想はこちら</h1>
-        <form id="form">
-          <input type="hidden" name="contact_number" />
-          <p>名前<br /><input type="text" name="name" class="txt" placeholder="必要な場合のみ記載。" /></p>
-          <p>内容<br /><textarea id="message" name="message" cols="28" rows="5" placeholder="個人情報は入力しないでください。"></textarea></p>
-          <p><input type="submit" value="内容を送信" class="formB" /></p>
-        </form>
-      </div>
-      <div class="hidden_box">
-        <label for="label" class="formB2"><a>利用規約</a></label>
-        <input type="checkbox" id="label" />
-        <div class="hidden_show">
-          <p>こちらのフォームは完全匿名のフォームです。</p>
-          <p>完全匿名となりますので、一切の個人情報の入力はご遠慮ください。</p>
-          <p>返信はできかねますのでご了承ください。</p>
-          <p>サイト利用時のご意見やご感想等ございましたらお願いします。 <br />率直な意見がほしいのですが、辛辣な言葉は控えていただけるとありがたいです。</p>
+        <h1 class="title">クレジット</h1>
+        <div class="under"></div>
+        <div class="card-body">
+          <div class="card">
+            <a href="http://font.sumomo.ne.jp/font_1.html" target="_blank" rel="noopener noreferrer" class="link"
+              ><img src="./img/works_img/keifont.png" class="card-img" /><br /><span class="card-txt">けいふぉんと</span></a
+            >
+          </div>
+          <div class="card">
+            <a href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer" class="link"
+              ><img src="./img/works_img/googlefonts.png" class="card-img" /><br /><span class="card-txt">Google Fonts</span></a
+            >
+          </div>
+          <div class="card">
+            <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer" class="link"
+              ><img src="./img/works_img/fontawesome.png" class="card-img" /><br /><span class="card-txt">FONT AWESOME</span></a
+            >
+          </div>
+          <div class="card">
+            <a href="https://webdesignreference.fc2.net/" target="_blank" rel="noopener noreferrer" class="link"
+              ><img src="./img/works_img/web.png" class="card-img" /><br /><span class="card-txt">WEBデザインリファレンス</span></a
+            >
+          </div>
         </div>
       </div>
+      <div>
+        <div>
+          <h1 class="title2">ご意見ご感想はこちら</h1>
+          <form id="form">
+            <input type="hidden" name="contact_number" />
+            <p>名前<br /><input type="text" name="name" class="txt" placeholder="必要な場合のみ記載。" /></p>
+            <p>内容<br /><textarea id="message" name="message" cols="28" rows="5" placeholder="個人情報は入力しないでください。"></textarea></p>
+            <p><input type="submit" value="内容を送信" class="formB" /></p>
+          </form>
+        </div>
+        <div class="hidden_box">
+          <label for="label" class="formB2"><a>利用規約</a></label>
+          <input type="checkbox" id="label" />
+          <div class="hidden_show">
+            <p>こちらのフォームは完全匿名のフォームです。</p>
+            <p>完全匿名となりますので、一切の個人情報の入力はご遠慮ください。</p>
+            <p>返信はできかねますのでご了承ください。</p>
+            <p>サイト利用時のご意見やご感想等ございましたらお願いします。 <br />率直な意見がほしいのですが、辛辣な言葉は控えていただけるとありがたいです。</p>
+          </div>
+        </div>
+      </div>
+      <div class="copy"><a>&copy; 2023 Shicoku</a></div>
     </div>
-    <div class="copy"><a>&copy; 2023 Shicoku</a></div>
   </body>
 </html>
