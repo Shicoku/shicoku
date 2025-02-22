@@ -330,7 +330,14 @@ a {
 .card-txt {
   font-family: kei;
   font-size: 22px;
-  margin-left: 10px;
+  margin-left: 5px;
+}
+
+.mini {
+  font-family: kei;
+  font-size: 19px;
+  margin-left: 5px;
+  color: #6d6d6d;
 }
 
 .card-body div {
