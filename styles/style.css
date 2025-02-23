@@ -409,8 +409,15 @@ a {
 
   .card-txt {
     font-family: kei;
-    font-size: 20px;
-    margin-left: 30px;
+    font-size: 22px;
+    margin-left: -15px;
+  }
+
+  .mini {
+    font-family: kei;
+    font-size: 19px;
+    margin-left: -15px;
+    color: #6d6d6d;
   }
 
   .about-btn {
