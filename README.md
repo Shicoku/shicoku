@@ -1,20 +1,26 @@
-<h1 align="center">Hey, I'm Shicoku / Syu 👋</h1>
-<p align="left">
-  <a href="https://github.com/Shicoku/Shicoku/">
-    <img src="https://komarev.com/ghpvc/?username=Shicoku" alt="Shicoku" />
-  </a>
-  <a href="https://github.com/Shicoku">
-    <img height="20" src="https://img.shields.io/github/followers/Shicoku?label=follow&logo=github&style=flat" />
-  </a>
-</p>
+# Shicoku / Syu <img alt="GitHub Issues" src="https://img.shields.io/github/issues/shicoku/shicoku" /> <img alt="GitHub followers" src="https://img.shields.io/github/followers/shicoku.svg?style=social&label=Follow&maxAge=2592000" />
 
-<p align="left">
-  <img alt="Top Langs" height="150px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shicoku&layout=compact&count_private=true&show_icons=true&show_icons=true&theme=onedark" />
-  <img alt="github stats" height="150px" src="https://github-readme-stats.vercel.app/api?username=Shicoku&count_private=true&show_icons=true&show_icons=true&theme=onedark" />
-</p>
+![shicoku](./img/shicoku.png)
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=Shicoku&theme=onedark)](https://github.com/Shicoku/github-profile-trophy)
+## About me
+- name: Shicoku
+- Age: 19
+- Language
+  - Japanese
+  - Portuguese
+- University Student
 
-<h1 align="center">Home Page Link</h1>
-
+### Home Page Link
 https://shicoku.vercel.app/
+
+## My Tech
+![My Tech](https://skillicons.dev/icons?i=html,css,js,nodejs,electron,discordjs,cpp,python,vscode)
+
+## Activity
+<a><img height=200 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api/top-langs/?username=Shicoku&theme=transparent&layout=compact" />
+<img height=165 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api?username=Shicoku&show_icons=true&theme=transparent" /></a>
+
+## Contact
+[![gmail](https://skillicons.dev/icons?i=gmail)](mailto:shicoku07@gmail.com)
+[![Twitter](https://skillicons.dev/icons?i=twitter)](https://x.com/H2DH8K)
+[![misskey](https://skillicons.dev/icons?i=misskey)](https://misskey.io/@H2DH8K)
