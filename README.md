@@ -14,7 +14,7 @@
 https://shicoku.vercel.app/
 
 ## My Tech
-![My Tech](https://skillicons.dev/icons?i=html,css,js,nodejs,electron,discordjs,cpp,python,vscode)
+![My Tech](https://skillicons.dev/icons?i=html,css,js,nodejs,electron,discordjs,typescript,cpp,python,vscode)
 
 ## Activity
 <a><img height=200 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api/top-langs/?username=Shicoku&theme=transparent&layout=compact" />
