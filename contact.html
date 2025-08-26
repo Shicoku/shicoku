@@ -20,91 +20,76 @@
     <title>Shicoku / シュー</title>
     <!--styles-->
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+
     <!--scripts-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script type="text/javascript">
-      (function () {
-        // ここ変更します
-        emailjs.init("CwbY34lk5uV18tqtk");
-      })();
-    </script>
-    <script type="text/javascript">
-      window.onload = function () {
-        document.getElementById("form").addEventListener("submit", function (event) {
-          event.preventDefault();
 
-          this.contact_number.value = (Math.random() * 100000) | 0;
-          // ここ変更します
-          let message = document.getElementById("message").value;
-
-          if (message == "") {
-            alert("メッセージが入力されていません");
-            return;
-          } else {
-            emailjs.sendForm("service_tvcd8ph", "template_knsvb2e", this).then(
-              function () {
-                alert("送信されました");
-              },
-              function (error) {
-                console.log("FAILED...", error);
-              }
-            );
-          }
-        });
-      };
-    </script>
     <script src="https://kit.fontawesome.com/4a6af072b1.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="margin">
-      <a href="./index.html" class="back-btn">←</a>
-      <div class="about-btn">
-        <a class="btn" href="./about.html">About</a>
-        <a class="btn" href="./works.html">Works</a>
-        <a class="btn here">Contact</a>
-      </div>
-      <div class="menu">
-        <input type="checkbox" id="menu-btn-check" />
-        <div class="menu-bg"></div>
-        <label for="menu-btn-check" class="menu-btn"><span></span></label>
-        <div class="menu-content">
-          <ul>
-            <li>
-              <a href="./about.html">About</a>
-            </li>
-            <li>
-              <a href="./works.html">Works</a>
-            </li>
-            <li>
-              <a href="#" class="here2">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div id="header"></div>
 
+    <div class="margin">
       <div>
         <div>
-          <h1 class="title2">ご意見ご感想はこちら</h1>
-          <form id="form">
-            <input type="hidden" name="contact_number" />
-            <p>名前<br /><input type="text" name="name" class="txt" placeholder="必要な場合のみ記載。" /></p>
-            <p>内容<br /><textarea id="message" name="message" cols="28" rows="5" placeholder="個人情報は入力しないでください。"></textarea></p>
-            <p><input type="submit" value="内容を送信" class="formB" /></p>
-          </form>
-        </div>
-        <div class="hidden_box">
-          <label for="label" class="formB2"><a>利用規約</a></label>
-          <input type="checkbox" id="label" />
-          <div class="hidden_show">
-            <p>こちらのフォームは完全匿名のフォームです。</p>
-            <p>完全匿名となりますので、一切の個人情報の入力はご遠慮ください。</p>
-            <p>返信はできかねますのでご了承ください。</p>
-            <p>サイト利用時のご意見やご感想等ございましたらお願いします。 <br />率直な意見がほしいのですが、辛辣な言葉は控えていただけるとありがたいです。</p>
+          <h1 class="title2">お問い合わせはこちらから</h1>
+          <!-- <div class="sns-icon">
+            <a href="mailto:shicoku07@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=gmail&theme=light" alt="gmail" /></a>
+            <a href="https://x.com/H2DH8K" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=twitter&theme=light" alt="twitter" /></a>
+            <a href="https://x.com/Shicoku_" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=twitter&theme=light" alt="twitter" /></a>
+            <a href="https://misskey.io/@H2DH8K" target="_blank" rel="noopener noreferrer"><img src="https://skillicons.dev/icons?i=misskey&theme=light" alt="misskey" /></a>
+          </div> -->
+          <div>
+            <a class="flex" href="mailto:shicoku07@gmail.com" target="_blank" rel="noopener noreferrer">
+              <img src="img/gmail.png" alt="" />
+              <div class="flex-text">
+                <p class="title3">shicoku07@gmail.com</p>
+                <p class="desc">私のビジネスメールです。ご依頼やお問い合わせにはこちらをご利用ください。</p>
+              </div>
+            </a>
+            <a class="flex" href="https://x.com/Sck_Day" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter"></i>
+              <div class="flex-text">
+                <p class="title3">@Sck_Day</p>
+                <p class="desc">ゲームやプログラミング関係など幅広いジャンルの日常アカウントです。</p>
+              </div>
+            </a>
+            <a class="flex" href="https://x.com/Shicoku_" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-x-twitter"></i>
+              <div class="flex-text">
+                <p class="title3">@Shicoku_</p>
+                <p class="desc">ギターや合成音声などの音楽に関するアカウントです。</p>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-      <div class="copy"><a>&copy; 2023 Shicoku</a></div>
     </div>
+
+    <div id="footer"></div>
+    <script>
+      const headerContainer = document.getElementById("header");
+      fetch("/header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          headerContainer.innerHTML = html;
+
+          const currentPage = location.pathname.split("/").pop();
+
+          const links = headerContainer.querySelectorAll("a[data-page]");
+          links.forEach((link) => {
+            if (link.getAttribute("data-page") === currentPage) {
+              link.classList.add("here");
+              link.classList.add("here2");
+            }
+          });
+        });
+
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

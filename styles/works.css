@@ -10,7 +10,16 @@
   font-size: 1.3rem;
 }
 
+.menu-btn {
+  top: 15px;
+}
+
 @media screen and (max-width: 480px) {
+  .margin {
+    margin-top: 70px;
+    flex: 1;
+  }
+
   .card-img {
     margin-left: 20px;
   }

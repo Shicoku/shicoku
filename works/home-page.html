@@ -27,32 +27,9 @@
   </head>
   <body>
     <div>
-      <div class="margin">
-        <a href="../index.html" class="back-btn">←</a>
-        <div class="about-btn">
-          <a class="btn" href="../about.html">About</a>
-          <a class="btn here">Works</a>
-          <a class="btn" href="../contact.html">Contact</a>
-        </div>
-        <div class="menu">
-          <input type="checkbox" id="menu-btn-check" />
-          <div class="menu-bg"></div>
-          <label for="menu-btn-check" class="menu-btn"><span></span></label>
-          <div class="menu-content">
-            <ul>
-              <li>
-                <a href="./about.html">About</a>
-              </li>
-              <li>
-                <a href="#" class="here2">Works</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div id="header"></div>
 
+      <div class="margin">
         <div class="pass"><a href="../works.html" class="link">Works</a> / <a class="link">ホームページ</a></div>
         <div>
           <div class="left">
@@ -71,8 +48,33 @@
             </p>
           </div>
         </div>
-        <div><a class="copy">&copy; 2023 Shicoku</a></div>
       </div>
     </div>
+
+    <div id="footer"></div>
+    <script>
+      const headerContainer = document.getElementById("header");
+      fetch("../header.html")
+        .then((response) => response.text())
+        .then((html) => {
+          headerContainer.innerHTML = html;
+
+          const currentPage = "works.html";
+
+          const links = headerContainer.querySelectorAll("a[data-page]");
+          links.forEach((link) => {
+            if (link.getAttribute("data-page") === currentPage) {
+              link.classList.add("here");
+              link.classList.add("here2");
+            }
+          });
+        });
+
+      fetch("../footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
   </body>
 </html>

@@ -23,11 +23,19 @@
   }
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   animation: downIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
   width: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -42,8 +50,14 @@ a {
   color: #000;
 }
 
+footer {
+  margin-top: 22px;
+  text-align: center;
+}
+
 .margin {
   margin-left: 5px;
+  flex: 1;
 }
 
 .menu {
@@ -51,11 +65,11 @@ a {
 }
 .menu-btn {
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 25px;
+  right: 0;
   display: flex;
   height: 90px;
-  width: 120px;
+  width: 90px;
   justify-content: center;
   align-items: center;
   z-index: 90;
@@ -65,17 +79,17 @@ a {
 .menu-btn span:after {
   content: "";
   display: block;
-  height: 4px;
-  width: 45px;
+  height: 3px;
+  width: 30px;
   border-radius: 3px;
   background-color: #000000;
   position: absolute;
 }
 .menu-btn span:before {
-  bottom: 15px;
+  bottom: 10px;
 }
 .menu-btn span:after {
-  top: 15px;
+  top: 10px;
 }
 #menu-btn-check:checked ~ .menu-btn span {
   background-color: rgba(255, 255, 255, 0); /*メニューオープン時は真ん中の線を透明にする*/
@@ -173,52 +187,9 @@ a {
   vertical-align: top;
 }
 
-.back-btn {
-  font-family: kt;
-  color: #000000;
-  overflow: hidden;
-
-  border: 2px solid #000000;
-  border-radius: 100px;
-  font-size: 20px;
-  display: inline-block;
-  padding: 20px 30px;
-  margin: 20px 0;
-  position: relative;
-  margin-left: 10px;
-
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-.back-btn:before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background-color: #000000;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.back-btn:hover {
-  color: #ecf0f1;
-}
-.back-btn:hover:before {
-  left: 0;
-}
-
 .about-btn {
-  margin-top: -95px;
-  margin-left: 90px;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .btn {
@@ -324,7 +295,13 @@ a {
 
 .under {
   border-bottom: 2px solid;
-  width: 1890px;
+  width: 98%;
+  margin-left: 10px;
+}
+
+.under2 {
+  border-bottom: 1px solid;
+  width: 98%;
   margin-left: 10px;
 }
 
@@ -391,6 +368,10 @@ a {
   }
   .menu {
     display: block;
+  }
+
+  .margin {
+    margin-top: 20px;
   }
 
   .under {

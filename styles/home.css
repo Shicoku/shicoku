@@ -81,7 +81,7 @@ h1 {
 }
 .icon1:hover::after {
   opacity: 0.8;
-  content: "Shicoku_";
+  content: "Sck_Day";
   font-size: 70%;
   animation: downIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
   position: absolute;
@@ -103,7 +103,7 @@ h1 {
 }
 .x2:hover::after {
   opacity: 0.8;
-  content: "H2DH8K";
+  content: "Shicoku_";
   font-size: 70%;
   animation: downIn 0.7s cubic-bezier(0.33, 1, 0.68, 1) 1 forwards;
   position: absolute;
