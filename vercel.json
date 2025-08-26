@@ -1,5 +1,4 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD README.md docs/"
+  "trailingSlash": false
 }
