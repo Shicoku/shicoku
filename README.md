@@ -22,5 +22,5 @@ https://shicoku.vercel.app/
 
 ## Contact
 [![gmail](https://skillicons.dev/icons?i=gmail)](mailto:shicoku07@gmail.com)
-[![Twitter](https://skillicons.dev/icons?i=twitter)](https://x.com/H2DH8K)
+[![Twitter](https://skillicons.dev/icons?i=twitter)](https://x.com/Sck_Day)
 [![misskey](https://skillicons.dev/icons?i=misskey)](https://misskey.io/@H2DH8K)
