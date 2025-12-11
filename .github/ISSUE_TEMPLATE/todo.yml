@@ -1,0 +1,23 @@
+name: ✅ ToDo
+description: 簡単なタスクやToDoを追加するためのテンプレート
+title: "[ToDo] "
+labels: ["todo"]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: タスク内容
+      description: 実施したいタスクを記入してください
+      placeholder: 「READMEの更新」「テストケース追加」
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: priority
+    attributes:
+      label: 優先度
+      description: このタスクの優先度を選択してください
+      options:
+        - label: 🔴 高
+        - label: 🟡 中
+        - label: 🟢 低

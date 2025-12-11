@@ -1,0 +1,42 @@
+name: 🐛 Bug Report
+description: バグや不具合を報告するためのテンプレート
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: バグの簡単な説明を記入してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現性
+      description: バグを再現するための手順を記入してください
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待される動作
+      description: 本来どう動作するべきかを記入してください
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境情報
+      description: 使用しているOSやブラウザ、バージョンなどを記入してください
+      placeholder: |
+        - OS: Windows 11 / macOS 14 / Ubuntu 22.04
+        - ブラウザ: Chrome 120
+        - バージョン: v1.2.3
