@@ -1,7 +1,7 @@
 name: ✨ Feature Request
 description: 新しい機能や改善点を提案するためのテンプレート
 title: "[Feature] "
-labels: ["enhancement"]
+labels: ["機能リクエスト"]
 body:
   - type: textarea
     id: summary

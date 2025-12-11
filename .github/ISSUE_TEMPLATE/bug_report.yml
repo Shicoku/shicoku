@@ -1,7 +1,7 @@
 name: 🐛 Bug Report
 description: バグや不具合を報告するためのテンプレート
 title: "[Bug] "
-labels: ["bug"]
+labels: ["バグ"]
 body:
   - type: textarea
     id: summary
