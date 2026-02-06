@@ -1,46 +1,26 @@
-# Astro Starter Kit: Basics
+# Shicoku / Syu <img alt="GitHub Issues" src="https://img.shields.io/github/issues/shicoku/shicoku" /> <img alt="GitHub followers" src="https://img.shields.io/github/followers/shicoku.svg?style=social&label=Follow&maxAge=2592000" />
 
-```sh
-npm create astro@latest -- --template basics
-```
+![shicoku](./img/shicoku.png)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## About me
+- name: Shicoku
+- Age: 19
+- Language
+  - Japanese
+  - Portuguese
+- University Student
 
-## 🚀 Project Structure
+### Home Page Link
+https://shicoku.vercel.app/
 
-Inside of your Astro project, you'll see the following folders and files:
+## My Tech
+![My Tech](https://skillicons.dev/icons?i=html,css,js,nodejs,electron,discordjs,typescript,cpp,python,vscode)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+## Activity
+<a><img height=200 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api/top-langs/?username=Shicoku&theme=transparent&layout=compact" />
+<img height=165 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api?username=Shicoku&show_icons=true&theme=transparent" /></a>
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contact
+[![gmail](https://skillicons.dev/icons?i=gmail)](mailto:shicoku07@gmail.com)
+[![Twitter](https://skillicons.dev/icons?i=twitter)](https://x.com/Sck_Day)
+[![misskey](https://skillicons.dev/icons?i=misskey)](https://misskey.io/@H2DH8K)
