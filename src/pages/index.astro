@@ -2,28 +2,20 @@
 import Access from "../components/animations/access.astro";
 import Layout from "../layouts/Layout.astro";
 import Menu from "../components/menu.astro";
+import Slider from "../components/slider.astro";
 ---
 
 <Layout>
   <Access>
-    <!-- <img id="background" src="/back2.png" alt="background" fetchpriority="high" /> -->
     <main>
       <Menu />
-      <h1>Shicoku / 詩哭</h1>
+      <h1>Works</h1>
+      <Slider />
     </main>
   </Access>
 </Layout>
 
 <style>
-  #background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
   main {
     font-family: kt;
     opacity: 0;
@@ -37,5 +29,10 @@ import Menu from "../components/menu.astro";
     100% {
       opacity: 1;
     }
+  }
+
+  h1 {
+    font-size: 32px;
+    margin: 40px 0 20px 20px;
   }
 </style>
