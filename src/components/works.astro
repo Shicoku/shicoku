@@ -33,6 +33,11 @@ import { Image } from "astro:assets";
       </div>
     </a>
   </div>
+  <div class="dot">
+    <span class="dot-color"></span>
+    <span></span>
+    <span></span>
+  </div>
   <div class="view-button">
     <a href="/works">View More →</a>
   </div>
@@ -105,6 +110,22 @@ import { Image } from "astro:assets";
   .work-cards p {
     font-size: 1rem;
     margin-top: 0.5rem;
+  }
+
+  .dot {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  .dot span {
+    width: 10px;
+    height: 10px;
+    border: #55ddff 2px solid;
+    border-radius: 50%;
+  }
+  .dot-color {
+    background: #55ddff;
   }
 
   .view-button {
