@@ -7,37 +7,46 @@ import { Image } from "astro:assets";
 
 <div class="works">
   <h1 class="work-title">WORKS</h1>
-  <div class="work-cards">
-    <a
-      href="https://str-buildcard.vercel.app/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <div>
-        <Image src={BuildCard} alt="BuildCard" />
-        <h1>ビルドカード生成機</h1>
-        <p>『崩壊: スターレイル』のビルドカードを生成するWebアプリです。</p>
-      </div>
-    </a>
-    <a
-      href="https://una-exam.vercel.app/"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <div>
-        <Image src={UnaExam} alt="UnaExam" />
-        <h1>音街ウナ総合学力試験 ホームページ</h1>
-        <p>
-          響立うなうな学院で主催している『音街ウナ総合学力試験』の公式ホームページ及び試験会場です。
-        </p>
-      </div>
-    </a>
+
+  <div class="work-wrapper">
+    <button class="arrow-btn left" id="left-btn"></button>
+
+    <div class="work-cards">
+      <a
+        href="https://str-buildcard.vercel.app/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div>
+          <Image src={BuildCard} alt="BuildCard" />
+          <h1>ビルドカード生成機</h1>
+          <p>『崩壊: スターレイル』のビルドカードを生成するWebアプリです。</p>
+        </div>
+      </a>
+      <a
+        href="https://una-exam.vercel.app/"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div>
+          <Image src={UnaExam} alt="UnaExam" />
+          <h1>音街ウナ総合学力試験 ホームページ</h1>
+          <p>
+            響立うなうな学院で主催している『音街ウナ総合学力試験』の公式ホームページ及び試験会場です。
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <button class="arrow-btn right" id="right-btn"></button>
   </div>
+
   <div class="dot">
     <span class="dot-color"></span>
     <span></span>
     <span></span>
   </div>
+
   <div class="view-button">
     <a href="/works">View More →</a>
   </div>
@@ -78,6 +87,64 @@ import { Image } from "astro:assets";
     height: 30px;
     right: 33%;
     bottom: -10%;
+  }
+
+  .work-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .arrow-btn {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #55ddff;
+    line-height: 1;
+    width: 1em;
+    height: 0.1em;
+    background: currentColor;
+  }
+  .arrow-btn.left::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border: 0.1em solid currentColor;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 50%;
+    left: -0.05em;
+    box-sizing: border-box;
+  }
+  .arrow-btn.right::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border: 0.1em solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 50%;
+    right: -0.05em;
+    box-sizing: border-box;
+  }
+  .arrow-btn.left {
+    left: 50px;
+  }
+  .arrow-btn.right {
+    right: 50px;
+  }
+  .arrow-btn:hover::before {
+    filter: brightness(0.8);
   }
 
   .work-cards {
@@ -167,3 +234,34 @@ import { Image } from "astro:assets";
     }
   }
 </style>
+
+<script>
+  const leftBtn = document.getElementById("left-btn") as HTMLButtonElement;
+  const rightBtn = document.getElementById("right-btn") as HTMLButtonElement;
+
+  let count = 1;
+
+  leftBtn.addEventListener("click", () => {
+    if (count != 1) {
+      count--;
+    }
+    updateDots();
+  });
+  rightBtn.addEventListener("click", () => {
+    if (count != 3) {
+      count++;
+    }
+    updateDots();
+  });
+
+  function updateDots() {
+    const dots = document.querySelectorAll(".dot span");
+    dots.forEach((dot, index) => {
+      if (index === count - 1) {
+        dot.classList.add("dot-color");
+      } else {
+        dot.classList.remove("dot-color");
+      }
+    });
+  }
+</script>
