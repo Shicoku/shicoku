@@ -3,6 +3,9 @@ import Access from "../components/animations/access.astro";
 import Layout from "../layouts/Layout.astro";
 import Menu from "../components/menu.astro";
 import Slider from "../components/slider.astro";
+
+import { Image } from "astro:assets";
+import nakine from "/public/utamachi_nakine.png";
 ---
 
 <Layout>
@@ -15,7 +18,8 @@ import Slider from "../components/slider.astro";
       </div>
 
       <div class="about">
-        <img class="about-img" src="/public/utamachi_nakine.png" alt="凪音" />
+        <!-- <img class="about-img" src={nakine} alt="凪音" /> -->
+        <Image src={nakine} alt="凪音" class="about-img" />
         <div class="about-text">
           <h1>詩哭 / Shicoku</h1>
           <p>学生<br />エンジニア / プログラマー</p>
@@ -104,6 +108,7 @@ import Slider from "../components/slider.astro";
     border: 3px solid #000;
     border-radius: 10px;
     width: 700px;
+    height: auto;
   }
   .about-text {
     align-items: flex-start;
