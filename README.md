@@ -17,7 +17,7 @@ https://shicoku.vercel.app/
 
 ## My Tech
 
-![My Tech](https://skillicons.dev/icons?i=html,css,js,nodejs,electron,discordjs,typescript,cpp,python,vscode)
+![My Tech](https://skillicons.dev/icons?i=html,css,js,nodejs,electron,astro,discordjs,typescript,cpp,python,vscode)
 
 ## Activity
 
