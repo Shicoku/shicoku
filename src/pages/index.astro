@@ -121,4 +121,53 @@ import nakine from "/public/utamachi_nakine.png";
     font-size: 1.5rem;
     margin-top: 1rem;
   }
+
+  .works {
+    text-align: center;
+  }
+  .works h1 {
+    position: relative;
+    padding-left: 50px;
+    font-family: boldnese;
+    font-size: 5rem;
+    margin-top: 3rem;
+  }
+  .works h1::before {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0 0, 0 100%, 30% 100%, 30% 30%, 100% 30%, 100% 0);
+    background: #55ddff;
+    width: 30px;
+    height: 30px;
+    top: -10%;
+    left: 35%;
+  }
+  .works h1::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0 70%, 0 100%, 100% 100%, 100% 0, 70% 0, 70% 70%);
+    background: #55ddff;
+    width: 30px;
+    height: 30px;
+    right: 33%;
+    bottom: -10%;
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .about-img {
+      width: 100%;
+      max-width: 300px;
+    }
+    .about-text h1 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+    .about-text p {
+      font-size: 1rem;
+    }
+  }
 </style>
