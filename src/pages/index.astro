@@ -9,8 +9,27 @@ import Slider from "../components/slider.astro";
   <Access>
     <main>
       <Menu />
-      <h1>Works</h1>
-      <Slider />
+      <div class="top-line">
+        <div class="logo">SCK</div>
+        <div class="line"></div>
+      </div>
+
+      <div class="about">
+        <img class="about-img" src="/public/utamachi_nakine.png" alt="凪音" />
+        <div class="about-text">
+          <h1>詩哭 / Shicoku</h1>
+          <p>学生<br />エンジニア / プログラマー</p>
+        </div>
+      </div>
+
+      <div class="under-line">
+        <div class="line"></div>
+        <div class="logo">SCK</div>
+      </div>
+
+      <div class="works">
+        <h1>WORKS</h1>
+      </div>
     </main>
   </Access>
 </Layout>
@@ -31,8 +50,70 @@ import Slider from "../components/slider.astro";
     }
   }
 
-  h1 {
-    font-size: 32px;
-    margin: 40px 0 20px 20px;
+  .top-line {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: boldnese;
+  }
+  .top-line .logo {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 1rem;
+    margin-left: 5rem;
+    color: #55ddff;
+  }
+  .top-line .line {
+    flex: 1;
+    height: 4px;
+    background-color: #55ddff;
+    opacity: 0.6;
+    margin-right: 80px;
+  }
+  .under-line {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    font-family: boldnese;
+  }
+  .under-line .logo {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 80px;
+    color: #55ddff;
+  }
+  .under-line .line {
+    flex: 1;
+    height: 4px;
+    background-color: #55ddff;
+    opacity: 0.6;
+    margin-right: 1rem;
+    margin-left: 5rem;
+  }
+
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0;
+    gap: 5rem;
+  }
+  .about-img {
+    border: 3px solid #000;
+    border-radius: 10px;
+    width: 700px;
+  }
+  .about-text {
+    align-items: flex-start;
+  }
+  .about-text h1 {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+  .about-text p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
   }
 </style>
