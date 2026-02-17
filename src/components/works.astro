@@ -1,3 +1,148 @@
 ---
+import BuildCard from "/public/works/BuildCard.png";
+import UnaExam from "/public/works/una-exam.png";
 
+import { Image } from "astro:assets";
 ---
+
+<div class="works">
+  <h1 class="work-title">WORKS</h1>
+  <div class="work-cards">
+    <a
+      href="https://str-buildcard.vercel.app/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div>
+        <Image src={BuildCard} alt="BuildCard" />
+        <h1>ビルドカード生成機</h1>
+        <p>『崩壊: スターレイル』のビルドカードを生成するWebアプリです。</p>
+      </div>
+    </a>
+    <a
+      href="https://una-exam.vercel.app/"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div>
+        <Image src={UnaExam} alt="UnaExam" />
+        <h1>音街ウナ総合学力試験 ホームページ</h1>
+        <p>
+          響立うなうな学院で主催している『音街ウナ総合学力試験』の公式ホームページ及び試験会場です。
+        </p>
+      </div>
+    </a>
+  </div>
+  <div class="view-button">
+    <a href="/works">View More →</a>
+  </div>
+</div>
+
+<style>
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .works {
+    text-align: center;
+  }
+  .work-title {
+    position: relative;
+    padding-left: 50px;
+    font-family: boldnese;
+    font-size: 3.5rem;
+    margin-top: 3rem;
+  }
+  .work-title::before {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0 0, 0 100%, 30% 100%, 30% 30%, 100% 30%, 100% 0);
+    background: #55ddff;
+    width: 30px;
+    height: 30px;
+    top: -10%;
+    left: 35%;
+  }
+  .work-title::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0 70%, 0 100%, 100% 100%, 100% 0, 70% 0, 70% 70%);
+    background: #55ddff;
+    width: 30px;
+    height: 30px;
+    right: 33%;
+    bottom: -10%;
+  }
+
+  .work-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .work-cards img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #55ddff;
+    border-radius: 10px;
+  }
+  .work-cards div {
+    width: 400px;
+    padding: 1rem;
+    border: 1px solid #55ddff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  .work-cards div:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+  .work-cards h1 {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+  }
+  .work-cards p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .view-button {
+    position: absolute;
+    margin-top: 2rem;
+    border: #55ddff 2px solid;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    right: 10%;
+  }
+  .view-button:hover {
+    background: #55ddff;
+    color: white;
+    transform: translateY(-5px);
+    transition:
+      background 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
+    .work-title {
+      font-size: 2.5rem;
+    }
+    .work-cards {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .work-cards div {
+      width: 100%;
+    }
+
+    .work-cards h1 {
+      font-size: 1.2rem;
+    }
+    .work-cards p {
+      font-size: 0.9rem;
+    }
+  }
+</style>

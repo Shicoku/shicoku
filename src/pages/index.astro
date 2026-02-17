@@ -18,7 +18,6 @@ import nakine from "/public/utamachi_nakine.png";
       </div>
 
       <div class="about">
-        <!-- <img class="about-img" src={nakine} alt="凪音" /> -->
         <Image src={nakine} alt="凪音" class="about-img" />
         <div class="about-text">
           <h1>詩哭 / Shicoku</h1>
@@ -31,10 +30,7 @@ import nakine from "/public/utamachi_nakine.png";
         <div class="logo">SCK</div>
       </div>
 
-      <div class="works">
-        <h1>WORKS</h1>
-        <Works />
-      </div>
+      <Works />
     </main>
   </Access>
 </Layout>
@@ -108,50 +104,19 @@ import nakine from "/public/utamachi_nakine.png";
   .about-img {
     border: 3px solid #000;
     border-radius: 10px;
-    width: 700px;
+    width: 500px;
     height: auto;
   }
   .about-text {
     align-items: flex-start;
   }
   .about-text h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-top: 5rem;
   }
   .about-text p {
     font-size: 1.5rem;
     margin-top: 1rem;
-  }
-
-  .works {
-    text-align: center;
-  }
-  .works h1 {
-    position: relative;
-    padding-left: 50px;
-    font-family: boldnese;
-    font-size: 5rem;
-    margin-top: 3rem;
-  }
-  .works h1::before {
-    content: "";
-    position: absolute;
-    clip-path: polygon(0 0, 0 100%, 30% 100%, 30% 30%, 100% 30%, 100% 0);
-    background: #55ddff;
-    width: 30px;
-    height: 30px;
-    top: -10%;
-    left: 35%;
-  }
-  .works h1::after {
-    content: "";
-    position: absolute;
-    clip-path: polygon(0 70%, 0 100%, 100% 100%, 100% 0, 70% 0, 70% 70%);
-    background: #55ddff;
-    width: 30px;
-    height: 30px;
-    right: 33%;
-    bottom: -10%;
   }
 
   @media (max-width: 768px) {
