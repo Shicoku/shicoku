@@ -62,6 +62,7 @@
 
   .music-menu .icon::after {
     content: "𝄽";
+    color: #0acfff;
     position: absolute;
     opacity: 0;
     transform: scale(0.5);
@@ -70,6 +71,9 @@
       transform 0.3s ease;
   }
 
+  #menu-toggle:checked ~ .music-menu .text {
+    color: #0acfff;
+  }
   #menu-toggle:checked ~ .music-menu .icon::before {
     opacity: 0;
     transform: scale(0.5);

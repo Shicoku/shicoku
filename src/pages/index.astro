@@ -21,7 +21,8 @@ import nakine from "/public/utamachi_nakine.png";
         <Image src={nakine} alt="凪音" class="about-img" />
         <div class="about-text">
           <h1>詩哭 / Shicoku</h1>
-          <p>学生<br />エンジニア / プログラマー</p>
+          <p>学生 / エンジニア</p>
+          <p>test</p>
         </div>
       </div>
 
@@ -63,12 +64,12 @@ import nakine from "/public/utamachi_nakine.png";
     font-size: 2rem;
     margin-right: 1rem;
     margin-left: 5rem;
-    color: #55ddff;
+    color: #0a1a2f;
   }
   .top-line .line {
     flex: 1;
-    height: 4px;
-    background-color: #55ddff;
+    height: 2px;
+    background-color: #0a1a2f;
     opacity: 0.6;
     margin-right: 80px;
   }
@@ -83,12 +84,12 @@ import nakine from "/public/utamachi_nakine.png";
     font-weight: bold;
     font-size: 2rem;
     margin-right: 80px;
-    color: #55ddff;
+    color: #0a1a2f;
   }
   .under-line .line {
     flex: 1;
-    height: 4px;
-    background-color: #55ddff;
+    height: 2px;
+    background-color: #0a1a2f;
     opacity: 0.6;
     margin-right: 1rem;
     margin-left: 5rem;
@@ -102,8 +103,8 @@ import nakine from "/public/utamachi_nakine.png";
     gap: 5rem;
   }
   .about-img {
-    border: 3px solid #000;
-    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
     width: 500px;
     height: auto;
   }
@@ -113,10 +114,17 @@ import nakine from "/public/utamachi_nakine.png";
   .about-text h1 {
     font-size: 2.5rem;
     margin-top: 5rem;
+    color: #0a1a2f;
+    border-bottom: 2px solid #55ddff;
   }
-  .about-text p {
-    font-size: 1.5rem;
+  .about-text p:nth-of-type(1) {
+    font-size: 1.7rem;
     margin-top: 1rem;
+    color: #777777;
+  }
+  .about-text p:nth-of-type(2) {
+    font-size: 1.5rem;
+    margin-top: -20px;
   }
 
   @media (max-width: 768px) {

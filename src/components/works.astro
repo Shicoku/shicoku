@@ -95,25 +95,26 @@ const cards = [
     font-family: boldnese;
     font-size: 3.5rem;
     margin-top: 3rem;
+    color: #0a1a2f;
   }
   .work-title::before {
     content: "";
     position: absolute;
     clip-path: polygon(0 0, 0 100%, 30% 100%, 30% 30%, 100% 30%, 100% 0);
-    background: #55ddff;
+    background: #0a1a2f;
     width: 30px;
     height: 30px;
     top: -10%;
-    left: 35%;
+    left: 40%;
   }
   .work-title::after {
     content: "";
     position: absolute;
     clip-path: polygon(0 70%, 0 100%, 100% 100%, 100% 0, 70% 0, 70% 70%);
-    background: #55ddff;
+    background: #0a1a2f;
     width: 30px;
     height: 30px;
-    right: 33%;
+    right: 37%;
     bottom: -10%;
   }
 
@@ -140,15 +141,15 @@ const cards = [
     content: "";
     width: 20px;
     height: 3px;
-    background: #55ddff;
+    background: #0a1a2f;
     border-radius: 2px;
   }
   .arrow-btn::before {
     content: "";
     width: 10px;
     height: 10px;
-    border-top: 3px solid #55ddff;
-    border-right: 3px solid #55ddff;
+    border-top: 3px solid #0a1a2f;
+    border-right: 3px solid #0a1a2f;
     position: absolute;
   }
   .arrow-btn.left::before {
@@ -165,6 +166,17 @@ const cards = [
   .arrow-btn.right {
     right: 50px;
   }
+  .arrow-btn:hover::after {
+    background: #55ddff;
+  }
+  .arrow-btn:hover::before {
+    border-top: 3px solid #55ddff;
+    border-right: 3px solid #55ddff;
+  }
+  .arrow-btn:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
 
   .work-cards {
     display: flex;
@@ -175,27 +187,32 @@ const cards = [
   .work-cards img {
     width: 100%;
     height: auto;
-    border: 1px solid #55ddff;
-    border-radius: 10px;
+    border: 1px solid #e5f7ff;
+    border-radius: 12px;
   }
   .work-cards div {
     width: 400px;
     padding: 1rem;
-    border: 1px solid #55ddff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border: 1px solid #e5f7ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
   }
   .work-cards div:hover {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
+    border-color: #55ddff;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   }
   .work-cards h1 {
     font-size: 1.3rem;
     margin-top: 1rem;
+    color: #0a1a2f;
+    font-weight: 600;
   }
   .work-cards p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-top: 0.5rem;
+    color: #333333;
   }
 
   .dot {
@@ -207,25 +224,28 @@ const cards = [
   .dot span {
     width: 10px;
     height: 10px;
-    border: #55ddff 2px solid;
+    border: #c2edff 2px solid;
     border-radius: 50%;
   }
   .dot-color {
     background: #55ddff;
+    border: #55ddff 2px solid;
   }
 
   .view-button {
     position: absolute;
     margin-top: 2rem;
-    border: #55ddff 2px solid;
+    border: #0a1a2f 2px solid;
     display: inline-block;
-    padding: 0.5rem 1rem;
+    padding: 10px 18px;
     border-radius: 30px;
     right: 10%;
+    color: #0a1a2f;
   }
   .view-button:hover {
     background: #55ddff;
-    color: white;
+    color: #e5f7ff;
+    border: #55ddff 2px solid;
     transform: translateY(-5px);
     transition:
       background 0.3s ease,
