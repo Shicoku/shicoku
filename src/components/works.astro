@@ -1,8 +1,44 @@
 ---
+import { Image } from "astro:assets";
+
+import StarrailManager from "/public/works/starrail-manager.png";
+import UnagakuBot from "/public/works/unagaku-bot.png";
 import BuildCard from "/public/works/BuildCard.png";
+import TextLoid from "/public/works/textloid.png";
 import UnaExam from "/public/works/una-exam.png";
 
-import { Image } from "astro:assets";
+const cards = [
+  {
+    href: "https://str-buildcard.vercel.app/",
+    img: BuildCard,
+    title: "ビルドカード生成機",
+    desc: "『崩壊: スターレイル』のビルドカードを生成するWebアプリです。",
+  },
+  {
+    href: "https://una-exam.vercel.app/",
+    img: UnaExam,
+    title: "音街ウナ総合学力試験 ホームページ",
+    desc: "響立うなうな学院で主催している『音街ウナ総合学力試験』の公式ホームページ及び試験会場です。",
+  },
+  {
+    href: "https://www.npmjs.com/package/starrail-manager",
+    img: StarrailManager,
+    title: "StarRail Manager",
+    desc: "Node.js用の『MiHoMo API』ラッパー、『崩壊: スターレイル』のデータを取得するnpmパッケージです。",
+  },
+  {
+    href: "https://discord.com/invite/Xh3mJ4AFgc",
+    img: UnagakuBot,
+    title: "響立うなうな学院 サポートBOT",
+    desc: "Discordサーバー『響立うなうな学院』のために作成したbotです。",
+  },
+  {
+    href: "https://github.com/Shicoku/TextLoid",
+    img: TextLoid,
+    title: "TextLoid",
+    desc: "『VOICEROID』でテキストファイルから一行ずつ生成し、保存するソフトウェアです。",
+  },
+];
 ---
 
 <div class="works">
@@ -11,31 +47,23 @@ import { Image } from "astro:assets";
   <div class="work-wrapper">
     <button class="arrow-btn left" id="left-btn"></button>
 
-    <div class="work-cards">
-      <a
-        href="https://str-buildcard.vercel.app/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <div>
-          <Image src={BuildCard} alt="BuildCard" />
-          <h1>ビルドカード生成機</h1>
-          <p>『崩壊: スターレイル』のビルドカードを生成するWebアプリです。</p>
-        </div>
-      </a>
-      <a
-        href="https://una-exam.vercel.app/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <div>
-          <Image src={UnaExam} alt="UnaExam" />
-          <h1>音街ウナ総合学力試験 ホームページ</h1>
-          <p>
-            響立うなうな学院で主催している『音街ウナ総合学力試験』の公式ホームページ及び試験会場です。
-          </p>
-        </div>
-      </a>
+    <div class="work-cards" id="work-cards">
+      {
+        cards.map((c) => (
+          <a
+            href={c.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="work-card"
+          >
+            <div>
+              <Image src={c.img} alt={c.title} />
+              <h1>{c.title}</h1>
+              <p>{c.desc}</p>
+            </div>
+          </a>
+        ))
+      }
     </div>
 
     <button class="arrow-btn right" id="right-btn"></button>
@@ -95,56 +123,47 @@ import { Image } from "astro:assets";
     align-items: center;
     justify-content: center;
   }
+
   .arrow-btn {
-    border: none;
-    cursor: pointer;
     position: absolute;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
     display: flex;
     align-items: center;
     justify-content: center;
-
-    color: #55ddff;
-    line-height: 1;
-    width: 1em;
-    height: 0.1em;
-    background: currentColor;
+  }
+  .arrow-btn::after {
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: #55ddff;
+    border-radius: 2px;
+  }
+  .arrow-btn::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #55ddff;
+    border-right: 3px solid #55ddff;
+    position: absolute;
   }
   .arrow-btn.left::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    border: 0.1em solid currentColor;
-    border-right: 0;
-    border-bottom: 0;
-    transform: rotate(-45deg);
-    transform-origin: top left;
-    position: absolute;
-    top: 50%;
-    left: -0.05em;
-    box-sizing: border-box;
+    transform: rotate(-135deg);
+    left: 12px;
   }
   .arrow-btn.right::before {
-    content: "";
-    width: 0.65em;
-    height: 0.65em;
-    border: 0.1em solid currentColor;
-    border-left: 0;
-    border-bottom: 0;
     transform: rotate(45deg);
-    transform-origin: top right;
-    position: absolute;
-    top: 50%;
-    right: -0.05em;
-    box-sizing: border-box;
+    right: 12px;
   }
   .arrow-btn.left {
     left: 50px;
   }
   .arrow-btn.right {
     right: 50px;
-  }
-  .arrow-btn:hover::before {
-    filter: brightness(0.8);
   }
 
   .work-cards {
@@ -220,7 +239,7 @@ import { Image } from "astro:assets";
     }
     .work-cards {
       flex-direction: column;
-      gap: 1rem;
+      gap: 3rem;
     }
     .work-cards div {
       width: 100%;
@@ -232,36 +251,53 @@ import { Image } from "astro:assets";
     .work-cards p {
       font-size: 0.9rem;
     }
+
+    .arrow-btn {
+      width: 60px;
+      height: 60px;
+    }
   }
 </style>
 
 <script>
   const leftBtn = document.getElementById("left-btn") as HTMLButtonElement;
   const rightBtn = document.getElementById("right-btn") as HTMLButtonElement;
+  const cards = document.querySelectorAll(".work-card");
 
-  let count = 1;
+  const pageSize = 2;
+  let page = 0;
+
+  function render() {
+    cards.forEach((card, index) => {
+      const start = page * pageSize;
+      const end = start + pageSize;
+
+      if (index >= start && index < end) {
+        (card as HTMLElement).style.display = "block";
+      } else {
+        (card as HTMLElement).style.display = "none";
+      }
+    });
+
+    updateDots();
+  }
 
   leftBtn.addEventListener("click", () => {
-    if (count != 1) {
-      count--;
-    }
-    updateDots();
+    if (page > 0) page--;
+    render();
   });
+
   rightBtn.addEventListener("click", () => {
-    if (count != 3) {
-      count++;
-    }
-    updateDots();
+    if ((page + 1) * pageSize < cards.length) page++;
+    render();
   });
 
   function updateDots() {
     const dots = document.querySelectorAll(".dot span");
-    dots.forEach((dot, index) => {
-      if (index === count - 1) {
-        dot.classList.add("dot-color");
-      } else {
-        dot.classList.remove("dot-color");
-      }
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("dot-color", i === page);
     });
   }
+
+  render();
 </script>
