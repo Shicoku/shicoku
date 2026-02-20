@@ -95,13 +95,13 @@ const cards = [
     font-family: boldnese;
     font-size: 3.5rem;
     margin-top: 3rem;
-    color: #184177;
+    color: #112e55;
   }
   .work-title::before {
     content: "";
     position: absolute;
     clip-path: polygon(0 0, 0 100%, 30% 100%, 30% 30%, 100% 30%, 100% 0);
-    background: #184177;
+    background: #112e55;
     width: 30px;
     height: 30px;
     top: -10%;
@@ -111,7 +111,7 @@ const cards = [
     content: "";
     position: absolute;
     clip-path: polygon(0 70%, 0 100%, 100% 100%, 100% 0, 70% 0, 70% 70%);
-    background: #184177;
+    background: #112e55;
     width: 30px;
     height: 30px;
     right: 37%;
@@ -141,15 +141,15 @@ const cards = [
     content: "";
     width: 20px;
     height: 3px;
-    background: #184177;
+    background: #112e55;
     border-radius: 2px;
   }
   .arrow-btn::before {
     content: "";
     width: 10px;
     height: 10px;
-    border-top: 3px solid #184177;
-    border-right: 3px solid #184177;
+    border-top: 3px solid #112e55;
+    border-right: 3px solid #112e55;
     position: absolute;
   }
   .arrow-btn.left::before {
@@ -167,11 +167,11 @@ const cards = [
     right: 50px;
   }
   .arrow-btn:hover::after {
-    background: #55ddff;
+    background: #28d4ff;
   }
   .arrow-btn:hover::before {
-    border-top: 3px solid #55ddff;
-    border-right: 3px solid #55ddff;
+    border-top: 3px solid #28d4ff;
+    border-right: 3px solid #28d4ff;
   }
   .arrow-btn:hover {
     transform: translateY(-5px);
@@ -200,13 +200,13 @@ const cards = [
   .work-cards div:hover {
     transform: translateY(-5px);
     transition: transform 0.3s ease;
-    border-color: #55ddff;
+    border-color: #28d4ff;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   }
   .work-cards h1 {
     font-size: 1.3rem;
     margin-top: 1rem;
-    color: #184177;
+    color: #112e55;
     font-weight: 600;
   }
   .work-cards p {
@@ -228,24 +228,24 @@ const cards = [
     border-radius: 50%;
   }
   .dot-color {
-    background: #55ddff;
-    border: #55ddff 2px solid;
+    background: #28d4ff;
+    border: #28d4ff 2px solid;
   }
 
   .view-button {
     position: absolute;
     margin-top: 2rem;
-    border: #184177 2px solid;
+    border: #112e55 2px solid;
     display: inline-block;
     padding: 10px 18px;
     border-radius: 30px;
     right: 10%;
-    color: #184177;
+    color: #112e55;
   }
   .view-button:hover {
-    background: #55ddff;
+    background: #28d4ff;
     color: #e5f7ff;
-    border: #55ddff 2px solid;
+    border: #28d4ff 2px solid;
     transform: translateY(-5px);
     transition:
       background 0.3s ease,
@@ -257,15 +257,31 @@ const cards = [
     .work-title {
       font-size: 2.5rem;
     }
+    .work-title::before {
+      top: -15%;
+      left: 25%;
+    }
+    .work-title::after {
+      right: 15%;
+      bottom: -15%;
+    }
     .work-cards {
       flex-direction: column;
-      gap: 3rem;
+      align-items: center;
+      gap: 1rem;
+    }
+    .work-card {
+      display: flex;
+      justify-content: center;
+      width: 100%;
     }
     .work-cards div {
-      width: 100%;
+      width: 70%;
+      margin: 0 auto;
     }
 
     .work-cards h1 {
+      margin: 0 auto;
       font-size: 1.2rem;
     }
     .work-cards p {
@@ -275,6 +291,35 @@ const cards = [
     .arrow-btn {
       width: 60px;
       height: 60px;
+    }
+    .arrow-btn::after {
+      content: "";
+      width: 20px;
+      height: 3px;
+      background: #112e55;
+      border-radius: 2px;
+    }
+    .arrow-btn::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-top: 3px solid #112e55;
+      border-right: 3px solid #112e55;
+      position: absolute;
+    }
+    .arrow-btn.left::before {
+      transform: rotate(-135deg);
+      left: 20px;
+    }
+    .arrow-btn.right::before {
+      transform: rotate(45deg);
+      right: 20px;
+    }
+    .arrow-btn.left {
+      left: 5px;
+    }
+    .arrow-btn.right {
+      right: 5px;
     }
   }
 </style>

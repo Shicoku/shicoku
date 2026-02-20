@@ -61,15 +61,15 @@ import nakine from "/public/utamachi_nakine.png";
   }
   .top-line .logo {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-right: 1rem;
     margin-left: 5rem;
-    color: #184177;
+    color: #112e55;
   }
   .top-line .line {
     flex: 1;
     height: 2px;
-    background-color: #184177;
+    background-color: #112e55;
     opacity: 0.6;
     margin-right: 80px;
   }
@@ -82,14 +82,14 @@ import nakine from "/public/utamachi_nakine.png";
   }
   .under-line .logo {
     font-weight: bold;
-    font-size: 2rem;
-    margin-right: 80px;
-    color: #184177;
+    font-size: 1.7rem;
+    margin-right: 70px;
+    color: #112e55;
   }
   .under-line .line {
     flex: 1;
     height: 2px;
-    background-color: #184177;
+    background-color: #112e55;
     opacity: 0.6;
     margin-right: 1rem;
     margin-left: 5rem;
@@ -114,8 +114,8 @@ import nakine from "/public/utamachi_nakine.png";
   .about-text h1 {
     font-size: 2.5rem;
     margin-top: 5rem;
-    color: #184177;
-    border-bottom: 2px solid #55ddff;
+    color: #112e55;
+    border-bottom: 2px solid #28d4ff;
   }
   .about-text p:nth-of-type(1) {
     font-size: 1.7rem;
@@ -128,20 +128,39 @@ import nakine from "/public/utamachi_nakine.png";
   }
 
   @media (max-width: 768px) {
+    .top-line .logo {
+      margin-left: 2rem;
+      font-size: 1.4rem;
+    }
+    .top-line .line {
+      margin-right: 50px;
+    }
+    .under-line .logo {
+      font-size: 1.4rem;
+      margin-right: 20px;
+    }
+    .under-line .line {
+      margin-left: 2.5rem;
+    }
+
     .about {
       flex-direction: column;
+      align-items: center;
       gap: 2rem;
     }
     .about-img {
-      width: 100%;
+      width: 70%;
       max-width: 300px;
     }
     .about-text h1 {
-      font-size: 2rem;
-      margin-top: 2rem;
+      font-size: 2.2rem;
+      margin-top: 1rem;
     }
-    .about-text p {
-      font-size: 1rem;
+    .about-text p:nth-of-type(1) {
+      font-size: 1.6rem;
+    }
+    .about-text p:nth-of-type(2) {
+      font-size: 1.3rem;
     }
   }
 </style>
