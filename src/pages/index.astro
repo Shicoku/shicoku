@@ -1,35 +1,20 @@
 ---
 import Access from "../components/animations/access.astro";
-import Layout from "../layouts/Layout.astro";
-import Menu from "../components/menu.astro";
-import Works from "../components/works.astro";
 
-import { Image } from "astro:assets";
-import nakine from "/public/utamachi_nakine.png";
+import Layout from "../layouts/Layout.astro";
+
+import Menu from "../components/menu.astro";
+
+import About from "../components/about.astro";
+import Works from "../components/works.astro";
 ---
 
 <Layout>
   <Access>
     <main>
       <Menu />
-      <div class="top-line">
-        <div class="logo">SCK</div>
-        <div class="line"></div>
-      </div>
 
-      <div class="about">
-        <Image src={nakine} alt="凪音" class="about-img" />
-        <div class="about-text">
-          <h1>詩哭 / Shicoku</h1>
-          <p>学生 / エンジニア</p>
-          <p>test</p>
-        </div>
-      </div>
-
-      <div class="under-line">
-        <div class="line"></div>
-        <div class="logo">SCK</div>
-      </div>
+      <About />
 
       <Works />
     </main>
@@ -49,118 +34,6 @@ import nakine from "/public/utamachi_nakine.png";
     }
     100% {
       opacity: 1;
-    }
-  }
-
-  .top-line {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    margin-top: 1rem;
-    font-family: boldnese;
-  }
-  .top-line .logo {
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-right: 1rem;
-    margin-left: 5rem;
-    color: #112e55;
-  }
-  .top-line .line {
-    flex: 1;
-    height: 2px;
-    background-color: #112e55;
-    opacity: 0.6;
-    margin-right: 80px;
-  }
-  .under-line {
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    margin-top: 0.5rem;
-    font-family: boldnese;
-  }
-  .under-line .logo {
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-right: 70px;
-    color: #112e55;
-  }
-  .under-line .line {
-    flex: 1;
-    height: 2px;
-    background-color: #112e55;
-    opacity: 0.6;
-    margin-right: 1rem;
-    margin-left: 5rem;
-  }
-
-  .about {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 50px 0;
-    gap: 5rem;
-  }
-  .about-img {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    border-radius: 12px;
-    width: 500px;
-    height: auto;
-  }
-  .about-text {
-    align-items: flex-start;
-  }
-  .about-text h1 {
-    font-size: 2.5rem;
-    margin-top: 5rem;
-    color: #112e55;
-    border-bottom: 2px solid #28d4ff;
-  }
-  .about-text p:nth-of-type(1) {
-    font-size: 1.7rem;
-    margin-top: 1rem;
-    color: #777777;
-  }
-  .about-text p:nth-of-type(2) {
-    font-size: 1.5rem;
-    margin-top: -20px;
-  }
-
-  @media (max-width: 768px) {
-    .top-line .logo {
-      margin-left: 2rem;
-      font-size: 1.4rem;
-    }
-    .top-line .line {
-      margin-right: 50px;
-    }
-    .under-line .logo {
-      font-size: 1.4rem;
-      margin-right: 20px;
-    }
-    .under-line .line {
-      margin-left: 2.5rem;
-    }
-
-    .about {
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-    .about-img {
-      width: 70%;
-      max-width: 300px;
-    }
-    .about-text h1 {
-      font-size: 2.2rem;
-      margin-top: 1rem;
-    }
-    .about-text p:nth-of-type(1) {
-      font-size: 1.6rem;
-    }
-    .about-text p:nth-of-type(2) {
-      font-size: 1.3rem;
     }
   }
 </style>

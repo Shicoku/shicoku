@@ -91,31 +91,10 @@ const cards = [
   }
   .work-title {
     position: relative;
-    padding-left: 50px;
     font-family: boldnese;
     font-size: 3.5rem;
     margin-top: 3rem;
     color: #112e55;
-  }
-  .work-title::before {
-    content: "";
-    position: absolute;
-    clip-path: polygon(0 0, 0 100%, 30% 100%, 30% 30%, 100% 30%, 100% 0);
-    background: #112e55;
-    width: 30px;
-    height: 30px;
-    top: -10%;
-    left: 40%;
-  }
-  .work-title::after {
-    content: "";
-    position: absolute;
-    clip-path: polygon(0 70%, 0 100%, 100% 100%, 100% 0, 70% 0, 70% 70%);
-    background: #112e55;
-    width: 30px;
-    height: 30px;
-    right: 37%;
-    bottom: -10%;
   }
 
   .work-wrapper {
@@ -256,14 +235,6 @@ const cards = [
   @media (max-width: 768px) {
     .work-title {
       font-size: 2.5rem;
-    }
-    .work-title::before {
-      top: -15%;
-      left: 25%;
-    }
-    .work-title::after {
-      right: 15%;
-      bottom: -15%;
     }
     .work-cards {
       flex-direction: column;
