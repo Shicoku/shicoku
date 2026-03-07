@@ -1,0 +1,92 @@
+<header>
+  <div>
+    <h1>Shicoku</h1>
+  </div>
+  <div>
+    <input type="checkbox" id="menu-btn-check" />
+    <div class="menu-bg"></div>
+    <ul>
+      <li class="pc"><a href="/about">About</a></li>
+      <li class="pc"><a href="/projects">Projects</a></li>
+      <li class="pc"><a href="/contact">Contact</a></li>
+      <li>
+        <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    color: #fff;
+    display: flex;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  ul {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    right: 70px;
+    top: 25px;
+    font-size: 1.7rem;
+  }
+
+  li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 1rem;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-family: boldnese;
+  }
+  a:hover {
+    color: #ccc;
+    text-decoration: underline;
+  }
+
+  li label {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 26px;
+  }
+
+  span,
+  span:before,
+  span:after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 35px;
+    border-radius: 3px;
+    background-color: #fff;
+    position: absolute;
+  }
+  span:before {
+    bottom: 10px;
+  }
+  span:after {
+    top: 10px;
+  }
+
+  @media (max-width: 789px) {
+    .pc {
+      display: none;
+    }
+  }
+</style>

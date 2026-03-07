@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+
+import BuildCard from "../../assets/projects/buildcard.png";
+import UnaExam from "../../assets/projects/una-exam.png";
+import StarRailManager from "../../assets/projects/starrail-manager.png";
+import RuaBot from "../../assets/projects/rua-bot.png";
+---
+
+<div class="projects-grid">
+  <div>
+    <a href="https://str-buildcard.vercel.app/"
+      ><Image src={BuildCard} alt="BuildCard" width={400} /></a
+    >
+  </div>
+  <div>
+    <a href="https://una-exam.vercel.app/"
+      ><Image src={UnaExam} alt="Una Exam" width={400} /></a
+    >
+  </div>
+  <div>
+    <a href="https://www.npmjs.com/package/starrail-manager"
+      ><Image src={StarRailManager} alt="Star Rail Manager" width={400} /></a
+    >
+  </div>
+  <div>
+    <a href="https://discord.gg/Xh3mJ4AFgc"
+      ><Image src={RuaBot} alt="Rua Bot" width={400} /></a>
+  </div>
+</div>
+<style>
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    justify-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border: solid 5px #fff;
+    border-radius: 15px;
+    padding: 3rem 5.5rem;
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .projects-grid::before {
+    content: "Projects";
+    position: absolute;
+    top: -60px;
+    left: 7%;
+    font-size: 3rem;
+    font-weight: 700;
+    background: #7ea3cc;
+    padding: 0 20px;
+    color: #fff;
+    font-family: boldnese;
+  }
+
+  .projects-grid div {
+    padding: 20px;
+  }
+
+  .projects-grid a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .projects-grid img {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition:
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      box-shadow 0.3s ease,
+      filter 0.3s ease;
+    display: block;
+  }
+
+  .projects-grid a:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05);
+  }
+
+  @media screen and (max-width: 789px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

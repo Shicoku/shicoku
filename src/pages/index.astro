@@ -1,42 +1,28 @@
 ---
-import Access from "../components/animations/access.astro";
-
 import Layout from "../layouts/Layout.astro";
 
-import Menu from "../components/menu.astro";
-
-import About from "../components/about.astro";
-import Works from "../components/works.astro";
-import Contact from "../components/contact.astro";
+import Hero from "../components/home/hero.astro";
+import Profile from "../components/home/profile.astro";
+import Projects from "../components/home/projects.astro";
+import Contact from "../components/home/contact.astro";
 ---
 
 <Layout>
-  <Access>
-    <main>
-      <Menu />
+  <main>
+    <Hero />
 
-      <About />
+    <Profile />
 
-      <Works />
+    <Projects />
 
-      <Contact />
-    </main>
-  </Access>
+    <Contact />
+  </main>
 </Layout>
 
 <style>
   main {
     font-family: kt;
-    opacity: 0;
-    animation: fadeInMain 0.5s ease-in 1.4s forwards;
-  }
-
-  @keyframes fadeInMain {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    margin: 0;
+    color: #fff;
   }
 </style>
