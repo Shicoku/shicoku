@@ -1,0 +1,152 @@
+---
+import { Image } from "astro:assets";
+
+import Nakine from "/public/img/nakine.png";
+import Note from "../assets/links/note.svg";
+import Zenn from "../assets/links/zenn.svg";
+---
+
+<!doctype html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="/icons/shicoku.png" />
+    <link rel="shortcut icon" type="image/png" href="/icons/shicoku.png" />
+    <link rel="apple-touch-icon" href="/icons/shicoku.png" />
+
+    <title>Shicoku / 詩哭</title>
+  </head>
+</html>
+<body>
+  <div>
+    <div class="icon">
+      <Image src={Nakine} alt="Nakine" />
+      <p class="name">詩哭</p>
+      <p class="subname">Shicoku</p>
+    </div>
+    <div>
+      <ul>
+        <li>
+          <a href="https://shicoku.vercel.app/"
+            ><i class="fa-regular fa-house"></i>HomePage</a
+          >
+        </li>
+        <li>
+          <a href="https://twitter.com/Sck_Day"
+            ><i class="fa-brands fa-x-twitter"></i> @Sck_Day</a
+          >
+        </li>
+        <li>
+          <a href="https://twitter.com/Shicoku_"
+            ><i class="fa-brands fa-x-twitter"></i> @Shicoku_</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Shicoku"
+            ><i class="fa-brands fa-github" style="margin-right: 5px;"></i> GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://note.com/shicoku"
+            ><img src={Note.src} alt="note" style="width: 40px;" /> Shicoku / シュー
+          </a>
+        </li>
+        <li>
+          <a href="https://zenn.dev/shicoku"
+            ><img
+              src={Zenn.src}
+              alt="zenn"
+              style="width: 30px; margin-right: 10px;"
+            /> Zenn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+
+<style>
+  @font-face {
+    font-family: kt;
+    src: url(/font/kt.ttf);
+  }
+
+  @font-face {
+    font-family: boldnese;
+    src: url(/font/boldnese.ttf);
+  }
+
+  html {
+    font-family: kt;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #7ea3cc;
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .icon img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  div ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+    margin-top: 30px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  li a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+    border: solid 5px #fff;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 250px;
+  }
+
+  .name {
+    font-size: 2rem;
+    color: #fff;
+    margin: 10px 0 5px 0;
+    font-weight: bold;
+  }
+
+  .subname {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    font-weight: normal;
+  }
+</style>
+
+<script src="https://kit.fontawesome.com/5047205f69.js" crossorigin="anonymous"
+></script>
