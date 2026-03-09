@@ -21,9 +21,9 @@
 <div class="menu-overlay">
   <div class="menu-content">
     <div class="content">
-      <a href="/about"><span class="smart">About</span></a>
-      <a href="/projects"><span class="smart">Projects</span></a>
-      <a href="/contact"><span class="smart">Contact</span></a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
       <a href="/pages/credit">Credit</a>
       <a href="/pages/logo">Logo</a>
     </div>
@@ -134,7 +134,6 @@
     position: absolute;
     top: 60px;
     right: 10px;
-    /* background-color: rgba(0, 0, 0, 0.8); */
     padding: 1rem;
     border-radius: 5px;
     flex-direction: column;
@@ -150,6 +149,7 @@
   }
   .content a:hover {
     color: #ccc;
+    text-decoration: underline;
   }
 
   #menu-btn-check:checked ~ .menu-content {
@@ -188,13 +188,27 @@
   .menu-overlay .content a {
     font-size: 2rem;
     padding: 1rem 0;
+    z-index: 10;
   }
 
   .smart {
     display: none;
   }
 
+  .pc {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  header.menu-open .pc {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   @media (max-width: 789px) {
+    li label {
+      top: 10px;
+    }
+
     .pc {
       display: none;
     }
@@ -216,6 +230,7 @@
     "menu-btn-check",
   ) as HTMLInputElement;
   const menuOverlay = document.querySelector(".menu-overlay") as HTMLElement;
+  const header = document.querySelector("header");
 
   window.addEventListener("DOMContentLoaded", () => {
     const currentPath = window.location.pathname;
@@ -228,7 +243,6 @@
       contact.forEach((link) => link.classList.add("active"));
     }
 
-    // ハンバーガーメニューのトグル
     if (menuBtnCheck && menuOverlay) {
       const menuContent = menuOverlay.querySelector(
         ".menu-content",
@@ -236,14 +250,14 @@
       menuBtnCheck.addEventListener("change", () => {
         if (menuBtnCheck.checked) {
           menuOverlay.style.transform = "translateY(0)";
-          // メニューコンテンツをフェードイン
+          header?.classList.add("menu-open");
           setTimeout(() => {
             menuContent.classList.add("fade-in");
-          }, 300); // スライドイン後にフェードイン
+          }, 300);
         } else {
           menuOverlay.style.transform = "translateY(-100%)";
-          // フェードインをリセット
           menuContent.classList.remove("fade-in");
+          header?.classList.remove("menu-open");
         }
       });
     }
