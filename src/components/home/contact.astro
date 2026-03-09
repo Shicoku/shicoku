@@ -26,6 +26,7 @@
   div {
     display: flex;
     height: 100vh;
+    justify-content: center;
   }
 
   .contact {
@@ -34,9 +35,9 @@
 
   .message {
     flex-direction: column;
-    justify-content: top;
     align-items: left;
     padding: 5rem;
+    margin-top: -200px;
   }
   .message h1 {
     font-size: 3rem;
@@ -53,8 +54,8 @@
     border-radius: 15px;
     padding-right: 10rem;
     margin-left: -80px;
-    margin-top: 50px;
-    height: 80%;
+    margin-top: 70px;
+    height: 60%;
   }
   .form::before {
     content: "Contact";
@@ -99,7 +100,7 @@
     padding: 0.5rem 1rem;
     width: 162%;
     font-size: 1.2rem;
-    background: #2b82e3;
+    background: #497cb6;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -112,6 +113,9 @@
       flex-direction: column;
     }
 
+    .message {
+      margin-top: 0;
+    }
     .message h1 {
       font-size: 2rem;
     }

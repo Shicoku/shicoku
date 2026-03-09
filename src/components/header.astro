@@ -1,6 +1,6 @@
 <header>
-  <div>
-    <h1>Shicoku</h1>
+  <div class="logo">
+    <h1><a href="/">Shicoku</a></h1>
   </div>
   <div>
     <input type="checkbox" id="menu-btn-check" />
@@ -32,6 +32,19 @@
 
   input[type="checkbox"] {
     display: none;
+  }
+
+  .logo h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    z-index: 1000;
+  }
+  .logo a {
+    font-family: kt;
   }
 
   ul {
@@ -84,9 +97,34 @@
     top: 10px;
   }
 
+  .active {
+    color: #497cb6;
+  }
+  .active:hover {
+    color: #2c4a6d;
+  }
+
   @media (max-width: 789px) {
     .pc {
       display: none;
     }
   }
 </style>
+
+<script>
+  const about = document.querySelector('a[href="/about"]');
+  const projects = document.querySelector('a[href="/projects"]');
+  const contact = document.querySelector('a[href="/contact"]');
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const currentPath = window.location.pathname;
+
+    if (currentPath === "/about") {
+      about?.classList.add("active");
+    } else if (currentPath === "/projects") {
+      projects?.classList.add("active");
+    } else if (currentPath === "/contact") {
+      contact?.classList.add("active");
+    }
+  });
+</script>

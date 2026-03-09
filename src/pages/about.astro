@@ -1,0 +1,132 @@
+---
+import { Image } from "astro:assets";
+
+import Layout from "../layouts/Layout.astro";
+
+import Nakine from "/public/img/nakine.png";
+---
+
+<Layout>
+  <main>
+    <div class="icon">
+      <Image src={Nakine} alt="Nakine" />
+      <p class="name">詩哭</p>
+      <p class="subname">Shicoku</p>
+      <p class="disc">ゆるくたのしく 好きなことを好きなように</p>
+    </div>
+
+    <div class="sns-icon">
+      <a
+        href="https://twitter.com/Sck_Day"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"><i class="fa-brands fa-x-twitter"></i></a
+      >
+      <a
+        href="https://github.com/Shicoku"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"><i class="fa-brands fa-github"></i></a
+      >
+      <a href="/links" class="button"><i class="fa-solid fa-ellipsis"></i></a>
+    </div>
+
+    <div class="desc">
+      <h1>Introduction</h1>
+      <p>
+        趣味でプログラミングをしています。主にWeb開発やDiscord
+        Botを作っています。
+        <br />他にもNPMパッケージの公開やソフトウェア開発など、色々作ります。
+        <br /><br />音楽やイラスト、アニメなども好きです。
+        <br /><br />依頼や質問などあれば、Xまたはメールにてご連絡ください。
+      </p>
+    </div>
+
+    <div class="desc">
+      <h1>ゆるくたのしくが人生</h1>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  div {
+    color: #fff;
+  }
+
+  .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+  }
+
+  .icon img {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    margin: 20px 0 8px 0;
+    font-weight: bold;
+    font-family: boldnese;
+    letter-spacing: 2px;
+  }
+
+  .subname {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0 20px 0;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+
+  .disc {
+    font-size: 1.3rem;
+    margin: 0;
+    line-height: 1.6;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .sns-icon {
+    display: flex;
+    gap: 20px;
+    font-size: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    border-bottom: solid 2px #fff;
+  }
+
+  .sns-icon a {
+    color: #fff;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .sns-icon a:hover {
+    transform: scale(1.2) translateY(-5px);
+  }
+
+  .desc {
+    margin-top: 60px;
+    text-align: center;
+  }
+  .desc h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: boldnese;
+  }
+  .desc p {
+    font-size: 1.3rem;
+  }
+</style>
