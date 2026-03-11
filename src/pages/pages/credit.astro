@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <h1>Credit</h1>
+    <h2>Fonts</h2>
+    <ul>
+      <li>
+        <a href="https://fonts.google.com/specimen/Kaisei+Tokumin">
+          Kaisei Tokumin
+        </a>
+      </li>
+      <li>
+        <a href="https://fonts.google.com/specimen/Boldonse"> Boldonse </a>
+      </li>
+    </ul>
+    <h2>Icons</h2>
+    <ul>
+      <li><a href="https://fontawesome.com/">Font Awesome</a></li>
+      <li><a href="https://note.com/">note</a></li>
+      <li><a href="https://zenn.dev/">Zenn</a></li>
+    </ul>
+    <h2>Production by Shicoku / 詩哭</h2>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    color: #fff;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-family: boldnese;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  ul {
+    margin-top: -5px;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #ccc;
+  }
+</style>
