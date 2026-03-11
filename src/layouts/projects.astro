@@ -56,4 +56,17 @@ const { title, image, description, links } = Astro.props;
     list-style: none;
     font-size: 2rem;
   }
+  @media (max-width: 789px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    img {
+      width: 350px;
+      height: 100%;
+    }
+    p {
+      font-size: 1.5rem;
+      width: 350px;
+    }
+  }
 </style>
