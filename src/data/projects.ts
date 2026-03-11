@@ -103,7 +103,7 @@ export const projects = [
     description: "VOICEROID で複数のファイルを一気に保存できるツールです。",
     links: [
       {
-        href: "",
+        href: "https://github.com/Shicoku/TextLoid",
         label: "textloid",
       },
     ],
