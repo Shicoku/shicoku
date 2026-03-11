@@ -23,13 +23,16 @@ import { projects } from "../data/projects";
 </Layout>
 
 <style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
-    justify-items: center;
     max-width: 900px;
-    margin: 0 auto;
     border-radius: 15px;
     padding: 3rem 5.5rem;
     position: relative;
@@ -48,7 +51,8 @@ import { projects } from "../data/projects";
   }
 
   .projects-grid div {
-    padding: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
   }
 
   .projects-grid a {
