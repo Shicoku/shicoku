@@ -1,0 +1,66 @@
+<footer>
+  <div>
+    <p><a href="/">&copy; 2026 Shicoku / 詩哭</a></p>
+  </div>
+  <div>
+    <ul>
+      <li>
+        <a href="/about">About</a>
+      </li>
+      <li>
+        <a href="/projects">Projects</a>
+      </li>
+      <li>
+        <a href="/contact">Contact</a>
+      </li>
+      <li>
+        <a href="/privacy">Privacy Policy</a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #cfcfcf;
+  }
+  a:hover {
+    text-decoration: underline;
+    opacity: 0.7;
+  }
+
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  li {
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 789px) {
+    footer {
+      flex-direction: column;
+    }
+    ul {
+      padding: 0px;
+      margin-top: -10px;
+      flex-direction: column;
+    }
+    li {
+      margin-top: -15px;
+    }
+  }
+</style>

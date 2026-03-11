@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <h1>プライバシー ポリシー</h1>
+    <p>
+      当サイトでは、お問い合わせフォームを通じて以下の情報を取得する場合があります。
+    </p>
+    <h2>取得する情報</h2>
+    <p>当サイトでは、必要に応じて以下の情報を取得します。</p>
+    <ul>
+      <li>お名前(任意)</li>
+      <li>メールアドレス(任意・返信が必要な場合のみ)</li>
+      <li>お問い合わせ内容</li>
+    </ul>
+    <p style="color: #497CB6;">※個人と特定できる情報は記入しないでください。</p>
+    <h2>利用目的</h2>
+    <p>
+      取得した情報は、お問い合わせへの返信が必要な場合に限り使用し、それ以外の目的では一切利用しません。
+    </p>
+    <h2>第三者への提供</h2>
+    <p>取得した情報を、第三者に提供することはありません。</p>
+    <h2>使用している外部サービス</h2>
+    <p>
+      お問い合わせフォームから送信された内容は
+      <br />
+      <a href="https://nodemailer.com/">nodemailer</a>
+      及び
+      <a href="https://mail.google.com">
+        Gmail のメール送信システム
+      </a>を利用して送信されます。
+    </p>
+    <h2>お問い合わせ</h2>
+    <p>
+      本ポリシーに関するご質問がある場合は、当サイトのお問い合わせフォームよりご連絡ください。
+    </p>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #ccc;
+  }
+
+  p,
+  ul {
+    margin-top: -15px;
+  }
+
+  @media (max-width: 789px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.3rem;
+      width: 380px;
+    }
+    li {
+      font-size: 1.3rem;
+      width: 380px;
+    }
+  }
+</style>
