@@ -1,0 +1,47 @@
+<div id="splash">
+  <div class="logo">Shicoku</div>
+</div>
+
+<style>
+  #splash {
+    position: fixed;
+    inset: 0;
+    background: #497cb6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease;
+  }
+
+  #splash.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .logo {
+    font-size: 2rem;
+    color: white;
+    animation: fadeIn 1.2s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<script>
+  window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+    setTimeout(() => {
+      splash?.classList.add("hide");
+    }, 1000);
+  });
+</script>
