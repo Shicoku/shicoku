@@ -223,6 +223,10 @@
 </style>
 
 <script>
+  import { projects as pj } from "../data/projects";
+  const slugs = pj.map((p) => "/projects/" + p.slug);
+  console.log(slugs);
+
   const about = document.querySelectorAll('a[href="/about"]');
   const projects = document.querySelectorAll('a[href="/projects"]');
   const contact = document.querySelectorAll('a[href="/contact"]');
@@ -237,7 +241,7 @@
 
     if (currentPath === "/about") {
       about.forEach((link) => link.classList.add("active"));
-    } else if (currentPath === "/projects") {
+    } else if (currentPath === "/projects" || slugs.includes(currentPath)) {
       projects.forEach((link) => link.classList.add("active"));
     } else if (currentPath === "/contact") {
       contact.forEach((link) => link.classList.add("active"));
