@@ -20,6 +20,7 @@ import Zenn from "../assets/links/zenn.svg";
     <title>Shicoku / 詩哭</title>
   </head>
 </html>
+
 <body>
   <div>
     <div class="icon">
@@ -65,6 +66,14 @@ import Zenn from "../assets/links/zenn.svg";
     </div>
   </div>
 </body>
+
+<footer>
+  <div>
+    <p>
+      <a href="/">&copy; 2026 Shicoku / 詩哭</a>
+    </p>
+  </div>
+</footer>
 
 <style>
   @font-face {
@@ -129,6 +138,14 @@ import Zenn from "../assets/links/zenn.svg";
     align-items: center;
     justify-content: center;
     min-width: 250px;
+
+    transition:
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 0.3s ease;
+  }
+  li a:hover {
+    transform: scale(1.08);
+    filter: brightness(1.05);
   }
 
   .name {
@@ -143,6 +160,23 @@ import Zenn from "../assets/links/zenn.svg";
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
     font-weight: normal;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer p {
+    font-size: 1.5rem;
+  }
+  footer a {
+    text-decoration: none;
+    color: #cfcfcf;
+  }
+  footer a:hover {
+    text-decoration: underline;
+    opacity: 0.7;
   }
 </style>
 
