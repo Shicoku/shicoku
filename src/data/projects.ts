@@ -1,16 +1,16 @@
-import BuildCard from "../assets/projects/buildcard.png";
-import UnaExam from "../assets/projects/una-exam.png";
-import StarRailManager from "../assets/projects/starrail-manager.png";
-import RuaBot from "../assets/projects/rua-bot.png";
-import MiniCraft from "../assets/projects/minicraft.png";
-import WebpPng from "../assets/projects/webp-to-png.png";
-import TextLoid from "../assets/projects/textloid.png";
+import buildcard from "../assets/projects/buildcard.png";
+import una_exam from "../assets/projects/una-exam.png";
+import starrail_manager from "../assets/projects/starrail-manager.png";
+import rua_bot from "../assets/projects/rua-bot.png";
+import minicraft from "../assets/projects/minicraft.png";
+import wep_to_png from "../assets/projects/webp-to-png.png";
+import textloid from "../assets/projects/textloid.png";
 
 export const projects = [
   {
     slug: "buildcard",
     title: "ビルドカード生成機",
-    image: BuildCard,
+    image: buildcard,
     description: "崩壊: スターレイルのビルドカードを生成できるツールです。",
     links: [
       {
@@ -30,7 +30,7 @@ export const projects = [
   {
     slug: "una-exam",
     title: "音街ウナ総合学力試験",
-    image: UnaExam,
+    image: una_exam,
     description:
       "響立うなうな学院 で主催している試験イベントの公式サイトです。",
     links: [
@@ -47,7 +47,7 @@ export const projects = [
   {
     slug: "starrail-manager",
     title: "StarRail Manager",
-    image: StarRailManager,
+    image: starrail_manager,
     description: "崩壊: スターレイル のデータを取得できる NPM パッケージです。",
     links: [
       {
@@ -63,7 +63,7 @@ export const projects = [
   {
     slug: "rua-bot",
     title: "学生証生成 BOT",
-    image: RuaBot,
+    image: rua_bot,
     description: "響立うなうな学院 のために作った学生証を生成する BOT です。",
     links: [
       {
@@ -74,20 +74,20 @@ export const projects = [
   },
   {
     slug: "minicraft",
-    title: "MiniCraft",
-    image: MiniCraft,
-    description: "私が所属しているグループ MiniCraft の公式サイトです。",
+    title: "minicraft",
+    image: minicraft,
+    description: "私が所属しているグループ minicraft の公式サイトです。",
     links: [
       {
         href: "https://mini-craft.vercel.app/",
-        label: "MiniCraft",
+        label: "minicraft",
       },
     ],
   },
   {
     slug: "webp-to-png",
     title: "Webp to Png",
-    image: WebpPng,
+    image: wep_to_png,
     description: "Webp 形式の画像を Png 形式の画像に変換するツールです。",
     links: [
       {
@@ -98,13 +98,13 @@ export const projects = [
   },
   {
     slug: "textloid",
-    title: "TextLoid",
-    image: TextLoid,
+    title: "textloid",
+    image: textloid,
     description: "VOICEROID で複数のファイルを一気に保存できるツールです。",
     links: [
       {
         href: "",
-        label: "TextLoid",
+        label: "textloid",
       },
     ],
   },

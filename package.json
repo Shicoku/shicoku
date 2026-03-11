@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "astro dev",
     "dev-host": "astro dev --host",
-    "format": "npx prettier . --write"
+    "format": "npx prettier . --write",
+    "project": "node tools/projects.js"
   },
   "dependencies": {
     "@astrojs/vercel": "^9.0.4",
@@ -15,6 +16,7 @@
   },
   "devDependencies": {
     "@types/xml2js": "^0.4.14",
+    "inquirer": "^13.3.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1"
   }
