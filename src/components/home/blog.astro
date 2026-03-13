@@ -8,6 +8,64 @@
   <div id="note-container"></div>
 </div>
 
+<style>
+  .blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-family: boldnese;
+  }
+
+  #note-container .note-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    border: solid 5px #fff;
+    margin-bottom: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition:
+      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+      filter 0.3s ease;
+  }
+  #note-container .note-card:hover {
+    transform: scale(1.08);
+    filter: brightness(1.05);
+  }
+  #note-container .note-thumb {
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  #note-container .note-title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+  #note-container .note-date {
+    font-size: 2rem;
+    opacity: 0.7;
+  }
+
+  @media screen and (max-width: 789px) {
+    #note-container .note-thumb {
+      width: 40%;
+    }
+    #note-container .note-title {
+      font-size: 1.3rem;
+    }
+    #note-container .note-date {
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
 <script>
   function formatDate(dateStr: string | number | Date) {
     const date = new Date(dateStr);
@@ -47,61 +105,3 @@
       .join("");
   });
 </script>
-
-<style>
-  .blog {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-family: boldnese;
-  }
-
-  .note-card {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 15px;
-    border: solid 5px #fff;
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    color: inherit;
-    transition:
-      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-      filter 0.3s ease;
-  }
-  .note-card:hover {
-    transform: scale(1.08);
-    filter: brightness(1.05);
-  }
-  .note-thumb {
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  .note-title {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-  }
-  .note-date {
-    font-size: 2rem;
-    opacity: 0.7;
-  }
-
-  @media screen and (max-width: 789px) {
-    .note-thumb {
-      width: 40%;
-    }
-    .note-title {
-      font-size: 1.3rem;
-    }
-    .note-date {
-      font-size: 1.2rem;
-    }
-  }
-</style>
