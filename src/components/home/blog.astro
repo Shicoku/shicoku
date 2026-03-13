@@ -1,6 +1,18 @@
 ---
-const res = await fetch("/api/note");
-const { items } = await res.json();
+export const prerender = false;
+
+import { parseStringPromise } from "xml2js";
+
+const RSS_URL = "https://note.com/shicoku/rss";
+
+const res = await fetch(RSS_URL);
+const xml = await res.text();
+
+const data = await parseStringPromise(xml);
+
+const allItems = data.rss.channel[0].item;
+
+const items = allItems.slice(0, 4);
 
 function formatDate(dateStr: any) {
   const date = new Date(dateStr);
