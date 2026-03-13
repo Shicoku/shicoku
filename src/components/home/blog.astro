@@ -1,25 +1,10 @@
 ---
-export const prerender = false;
-
-import { parseStringPromise } from "xml2js";
-
-const RSS_URL = "https://note.com/shicoku/rss";
-
-const res = await fetch(RSS_URL);
-const xml = await res.text();
-
-const data = await parseStringPromise(xml);
-
-const allItems = data.rss.channel[0].item;
-
-const items = allItems.slice(0, 4);
+const res = await fetch("/api/note-rss.js");
+const { items } = await res.json();
 
 function formatDate(dateStr: any) {
   const date = new Date(dateStr);
-  const y = date.getFullYear();
-  const m = date.getMonth() + 1;
-  const d = date.getDate();
-  return `${y}.${m}.${d}`;
+  return `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`;
 }
 ---
 
