@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/hero.astro";
 import Profile from "../components/home/profile.astro";
 import Projects from "../components/home/projects.astro";
-import Blog from "../components/home/blog.astro";
 
 export const prerender = false;
 
@@ -12,7 +11,7 @@ import { parseStringPromise } from "xml2js";
 
 const RSS_URL = "https://note.com/shicoku/rss";
 
-const res = await fetch(RSS_URL);
+const res = await fetch(RSS_URL, { cache: "no-store" });
 const xml = await res.text();
 
 const data = await parseStringPromise(xml);
