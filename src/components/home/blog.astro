@@ -1,56 +1,52 @@
 ---
-export const prerender = false;
 
-import { parseStringPromise } from "xml2js";
-
-const RSS_URL = "https://note.com/shicoku/rss";
-
-const res = await fetch(RSS_URL);
-const xml = await res.text();
-
-const data = await parseStringPromise(xml);
-
-const allItems = data.rss.channel[0].item;
-
-const items = allItems.slice(0, 4);
-
-function formatDate(dateStr: any) {
-  const date = new Date(dateStr);
-  const y = date.getFullYear();
-  const m = date.getMonth() + 1;
-  const d = date.getDate();
-  return `${y}.${m}.${d}`;
-}
 ---
 
 <div class="blog">
   <h1>Blog (note)</h1>
-  <div>
-    {
-      items.map(
+
+  <div id="note-container"></div>
+</div>
+
+<script>
+  function formatDate(dateStr: string | number | Date) {
+    const date = new Date(dateStr);
+    const y = date.getFullYear();
+    const m = date.getMonth() + 1;
+    const d = date.getDate();
+    return `${y}.${m}.${d}`;
+  }
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const res = await fetch("/api/note");
+    const { items } = await res.json();
+
+    const container = document.getElementById("note-container") as HTMLElement;
+
+    container.innerHTML = items
+      .map(
         (item: {
-          [x: string]: (string | null | undefined)[];
+          [x: string]: any[];
           link: any[];
           title: any[];
           pubDate: any[];
-        }) => (
-          <a href={item.link[0]} target="_blank" class="note-card">
-            <img
-              src={item["media:thumbnail"]?.[0]}
-              alt="thumbnail"
-              class="note-thumb"
-            />
-
-            <div>
-              <div class="note-title">{item.title[0]}</div>
-              <div class="note-date">{formatDate(item.pubDate[0])}</div>
-            </div>
-          </a>
-        ),
+        }) => `
+        <a href="${item.link[0]}" target="_blank" class="note-card">
+          <img
+            src="${item["media:thumbnail"]?.[0]}"
+            alt="thumbnail"
+            class="note-thumb"
+          />
+          <div>
+            <div class="note-title">${item.title[0]}</div>
+            <div class="note-date">${formatDate(item.pubDate[0])}</div>
+          </div>
+        </a>
+      `,
       )
-    }
-  </div>
-</div>
+      .join("");
+  });
+</script>
 
 <style>
   .blog {
