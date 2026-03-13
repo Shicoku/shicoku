@@ -1,7 +1,6 @@
 # Shicoku / Syu <img alt="GitHub Issues" src="https://img.shields.io/github/issues/shicoku/shicoku" /> <img alt="GitHub followers" src="https://img.shields.io/github/followers/shicoku.svg?style=social&label=Follow&maxAge=2592000" />
 
-![shicoku](./public/img/nakine.png)
-
+<img alt="nakine" src="./public/img/nakine.png" width="50%">
 ## About me
 
 - name: Shicoku
