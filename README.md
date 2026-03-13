@@ -1,10 +1,11 @@
 # Shicoku / Syu <img alt="GitHub Issues" src="https://img.shields.io/github/issues/shicoku/shicoku" /> <img alt="GitHub followers" src="https://img.shields.io/github/followers/shicoku.svg?style=social&label=Follow&maxAge=2592000" />
 
 <img alt="nakine" src="./public/img/nakine.png" width="50%">
+
 ## About me
 
 - name: Shicoku
-- Age: 19
+- Birth: June 26
 - Language
   - Japanese
   - Portuguese
