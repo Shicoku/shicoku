@@ -4,29 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/home/hero.astro";
 import Profile from "../components/home/profile.astro";
 import Projects from "../components/home/projects.astro";
-
-export const prerender = false;
-
-import { parseStringPromise } from "xml2js";
-
-const RSS_URL = "https://note.com/shicoku/rss";
-
-const res = await fetch(RSS_URL, { cache: "no-store" });
-const xml = await res.text();
-
-const data = await parseStringPromise(xml);
-
-const allItems = data.rss.channel[0].item;
-
-const items = allItems.slice(0, 4);
-
-function formatDate(dateStr: any) {
-  const date = new Date(dateStr);
-  const y = date.getFullYear();
-  const m = date.getMonth() + 1;
-  const d = date.getDate();
-  return `${y}.${m}.${d}`;
-}
+import Blog from "../components/home/blog.astro";
 ---
 
 <Layout>
@@ -37,34 +15,7 @@ function formatDate(dateStr: any) {
 
     <Projects />
 
-    <div class="blog">
-      <h1>Blog (note)</h1>
-      <div>
-        {
-          items.map(
-            (item: {
-              [x: string]: (string | null | undefined)[];
-              link: any[];
-              title: any[];
-              pubDate: any[];
-            }) => (
-              <a href={item.link[0]} target="_blank" class="note-card">
-                <img
-                  src={item["media:thumbnail"]?.[0]}
-                  alt="thumbnail"
-                  class="note-thumb"
-                />
-
-                <div>
-                  <div class="note-title">{item.title[0]}</div>
-                  <div class="note-date">{formatDate(item.pubDate[0])}</div>
-                </div>
-              </a>
-            ),
-          )
-        }
-      </div>
-    </div>
+    <Blog />
   </main>
 </Layout>
 
@@ -73,61 +24,5 @@ function formatDate(dateStr: any) {
     font-family: kt;
     margin: 0;
     color: #fff;
-  }
-
-  .blog {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-
-  .blog h1 {
-    font-size: 3rem;
-    font-family: boldnese;
-  }
-
-  .note-card {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 15px;
-    border: solid 5px #fff;
-    margin-bottom: 1.5rem;
-    text-decoration: none;
-    color: inherit;
-    transition:
-      transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
-      filter 0.3s ease;
-  }
-  .note-card:hover {
-    transform: scale(1.08);
-    filter: brightness(1.05);
-  }
-  .note-thumb {
-    width: 30%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  .note-title {
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-  }
-  .note-date {
-    font-size: 2rem;
-    opacity: 0.7;
-  }
-
-  @media screen and (max-width: 789px) {
-    .note-thumb {
-      width: 40%;
-    }
-    .note-title {
-      font-size: 1.3rem;
-    }
-    .note-date {
-      font-size: 1.2rem;
-    }
   }
 </style>
