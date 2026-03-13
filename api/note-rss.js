@@ -1,9 +1,7 @@
 import { parseStringPromise } from "xml2js";
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") return res.status(405).end();
-
-  const RSS_URL = "https://note.com/shicoku/ress";
+  const RSS_URL = "https://note.com/shicoku/rss";
 
   try {
     const rssRes = await fetch(RSS_URL);
