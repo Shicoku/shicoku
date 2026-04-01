@@ -41,9 +41,11 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center; */
+    margin-top: 100px;
+    margin-left: 100px;
     margin-top: 80px;
     color: #fff;
   }
@@ -75,18 +77,23 @@ import Layout from "../layouts/Layout.astro";
   }
 
   @media (max-width: 789px) {
+    main {
+      margin-left: 10px;
+      width: 350px;
+    }
+
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.1rem;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     p {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       width: 380px;
     }
     li {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       width: 380px;
     }
   }
