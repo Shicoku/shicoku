@@ -1,0 +1,66 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout>
+  <main>
+    <h1>MIDI配布所</h1>
+    <p>
+      耳コピしたMIDIファイルやustファイルなどを配布しています。
+      <br />同封のReadmeをよく読んでご利用ください。
+    </p>
+    <div>
+      <ul>
+        <li><a href="../../assets/data/小さな冒険者.zip">小さな冒険者</a></li>
+        <li>
+          <a href="../../assets/data/ロケットサイダー.zip">ロケットサイダー</a>
+        </li>
+        <li>
+          <a href="../../assets/data/ぬるぬるうなぎ.zip">ぬるぬるうなぎ</a>
+        </li>
+        <li><a href="../../assets/data/恋愛裁判.zip">恋愛裁判</a></li>
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-top: 100px;
+    margin-left: 100px;
+    color: #fff;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+  a {
+    color: #fff;
+  }
+  a:hover {
+    color: #ccc;
+  }
+
+  @media screen and (max-width: 789px) {
+    main {
+      margin-left: 20px;
+      width: 350px;
+    }
+    h1 {
+      font-size: 2.1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      width: 350px;
+    }
+    li {
+      font-size: 1.2rem;
+      width: 350px;
+    }
+  }
+</style>
