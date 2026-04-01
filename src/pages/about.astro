@@ -43,7 +43,7 @@ import Nakine from "/public/img/nakine.png";
     </div>
 
     <div class="desc">
-      <h1>History</h1>
+      <!-- <h1>History</h1> -->
       <p></p>
     </div>
   </main>
@@ -121,14 +121,23 @@ import Nakine from "/public/img/nakine.png";
 
   .desc {
     margin-top: 60px;
-    text-align: center;
+    margin-left: 20%;
   }
   .desc h1 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-family: boldnese;
   }
   .desc p {
     font-size: 1.3rem;
+  }
+
+  @media (max-width: 789px) {
+    .desc {
+      margin-top: 60px;
+      margin-left: 10%;
+      width: 350px;
+      /* text-align: center; */
+    }
   }
 </style>
