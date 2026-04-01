@@ -7,6 +7,7 @@ const { title, image, description, links } = Astro.props;
 
 <Layout>
   <main>
+    <div class="link"><a href="/projects">Projects</a> / {title}</div>
     <h1>{title}</h1>
     <Image src={image} alt={title} width={700} />
 
@@ -45,7 +46,6 @@ const { title, image, description, links } = Astro.props;
     font-size: 1.5rem;
   }
   a {
-    text-decoration: none;
     color: #fff;
   }
   a:hover {
@@ -55,6 +55,13 @@ const { title, image, description, links } = Astro.props;
   ul {
     font-size: 2rem;
   }
+
+  .link {
+    margin-left: 5.5rem;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+
   @media (max-width: 789px) {
     h1 {
       font-size: 2.5rem;
