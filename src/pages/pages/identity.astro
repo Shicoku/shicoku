@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 
 import { Image } from "astro:assets";
+import logo1 from "../../assets/logo/logo1.svg";
+import logo2 from "../../assets/logo/logo2.svg";
 ---
 
 <Layout>
@@ -66,7 +68,7 @@ import { Image } from "astro:assets";
       <ul>
         <li>
           使用できる色は <strong>白（#ffffff）</strong> または <strong
-            >黒（#000000）</strong
+            style="color: black;">黒（#000000）</strong
           > のみとします。
         </li>
         <li>
@@ -90,6 +92,15 @@ import { Image } from "astro:assets";
         <li>最低 <strong>10px</strong> 以上の余白を推奨します。</li>
       </ul>
     </ul>
+
+    <div class="logo">
+      <a href="/icons/logo.svg" download>
+        <Image src={logo1} alt="Shicoku Logo" width={200} />
+      </a>
+      <a href="/icons/logo2.svg" download>
+        <Image src={logo2} alt="Shicoku Logo (White)" width={200} />
+      </a>
+    </div>
 
     <h2>アイコン</h2>
     <p>
@@ -127,12 +138,15 @@ import { Image } from "astro:assets";
     font-size: 2.5rem;
   }
   h2 {
+    margin-top: 50px;
     font-size: 2rem;
   }
   p {
+    margin-top: -20px;
     font-size: 1.5rem;
   }
   ul {
+    margin-top: -5px;
     font-size: 1.5rem;
     width: 90%;
   }
@@ -144,6 +158,19 @@ import { Image } from "astro:assets";
   }
   a:hover {
     color: #ccc;
+  }
+
+  .logo {
+    display: flex;
+    gap: 60px;
+    margin-top: 30px;
+    margin-left: 80px;
+  }
+  .logo a {
+    text-decoration: none;
+  }
+  .logo a:hover {
+    opacity: 0.8;
   }
 
   @media screen and (max-width: 789px) {
@@ -168,6 +195,13 @@ import { Image } from "astro:assets";
     }
     ul ul {
       list-style: none;
+    }
+
+    .logo {
+      margin-left: 5px;
+    }
+    img {
+      width: 150px;
     }
   }
 </style>
