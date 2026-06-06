@@ -3,6 +3,11 @@ export const prerender = false;
 
 import { parseStringPromise } from "xml2js";
 
+Astro.response.headers.set(
+  "Cache-Control",
+  "s-maxage=600, stale-while-revalidate=60",
+);
+
 const RSS_URL = "https://note.com/shicoku/rss";
 
 const res = await fetch(RSS_URL);
