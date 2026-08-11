@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 
 import { projects } from "../data/projects";
+import { gallery } from "../data/gallery";
 ---
 
 <Layout>
@@ -15,6 +16,15 @@ import { projects } from "../data/projects";
             <a href={`/projects/${p.slug}`}>
               <Image src={p.image} alt={p.title} width={500} />
             </a>
+          </div>
+        ))
+      }
+    </div>
+    <div class="projects-grid">
+      {
+        gallery.map((g) => (
+          <div>
+            <Image src={g.image} alt={g.title} width={500} />
           </div>
         ))
       }
@@ -40,7 +50,7 @@ import { projects } from "../data/projects";
   }
 
   .projects-grid::before {
-    content: "Works";
+    content: "";
     position: absolute;
     top: -60px;
     left: 7%;
@@ -48,6 +58,12 @@ import { projects } from "../data/projects";
     font-weight: 700;
     color: #fff;
     font-family: boldnese;
+  }
+  .projects-grid:nth-of-type(1)::before {
+    content: "Works";
+  }
+  .projects-grid:nth-of-type(2)::before {
+    content: "Gallery";
   }
 
   .projects-grid div {
