@@ -6,8 +6,41 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <h1>404 Not Found</h1>
     <p>
-      現在、ホームページメンテナンスのため、アクセスができません。
-      <br />時間を空けて再度お試しください。
+      お探しのページは見つかりませんでした。
+      <br />ページが存在しない、またはリンクが間違っている可能性があります。
+      <br />お確かめの上、再度お試しください。
     </p>
-  </main></Layout
->
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin-top: 100px;
+    margin-left: 100px;
+    color: #fff;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin-top: -20px;
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 789px) {
+    main {
+      margin-left: 20px;
+      width: 350px;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+    }
+    p {
+      font-size: 1.2rem;
+      width: 380;
+    }
+  }
+</style>
