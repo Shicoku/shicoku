@@ -10,9 +10,9 @@
     "project": "node tools/projects.js"
   },
   "dependencies": {
-    "@astrojs/vercel": "^10.0.3",
+    "@astrojs/vercel": "^11.0.16",
     "astro": "^6.1.1",
-    "nodemailer": "^8.0.1",
+    "nodemailer": "^10.2.0",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
