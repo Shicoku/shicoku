@@ -1,0 +1,15 @@
+[
+  {
+    "label": "dev",
+    "command": "npm",
+    "args": ["run", "dev"],
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+  },
+  {
+    "label": "host",
+    "command": "npm",
+    "args": ["run", "host"],
+    "use_new_terminal": true,
+  },
+]

@@ -40,10 +40,18 @@ import Layout from "../../layouts/Layout.astro";
     font-size: 1.5rem;
   }
   a {
-    color: #fff;
+    color: #123b5e;
+    font-weight: 700;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
   }
   a:hover {
-    color: #ccc;
+    color: #071f34;
+    text-decoration-thickness: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid #123b5e;
+    outline-offset: 3px;
   }
 
   @media screen and (max-width: 789px) {

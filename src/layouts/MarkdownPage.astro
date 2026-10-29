@@ -1,0 +1,67 @@
+---
+import Layout from "./Layout.astro";
+import { Image } from "astro:assets";
+import logo1 from "../assets/logo/logo1.svg";
+import logo2 from "../assets/logo/logo2.svg";
+
+const { frontmatter } = Astro.props;
+---
+
+<Layout>
+  <main>
+    <article>
+      <slot />
+    </article>
+    {frontmatter.showLogos && (
+      <div class="logo" aria-label="ロゴのダウンロード">
+        <a href={logo1.src} download>
+          <Image src={logo1} alt="Shicoku Logo" width={200} />
+        </a>
+        <a href={logo2.src} download>
+          <Image src={logo2} alt="Shicoku Logo (White)" width={200} />
+        </a>
+      </div>
+    )}
+  </main>
+</Layout>
+
+<style>
+  main { margin: 100px 0 0 100px; color: #fff; }
+  article { width: 90%; font-size: 1.5rem; }
+  article :global(h1) { font-size: 2.5rem; }
+  article :global(h2) { margin-top: 50px; font-size: 2rem; }
+  article :global(p) { margin-top: -20px; }
+  article :global(ul) { margin-top: -5px; }
+  article :global(ul ul) { list-style: none; }
+  article :global(a) {
+    color: #123b5e;
+    text-decoration: underline;
+    text-decoration-color: #123b5e;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
+    transition: color 150ms ease, text-decoration-color 150ms ease;
+  }
+  article :global(a:hover) {
+    color: #071f34;
+    text-decoration-color: #071f34;
+    text-decoration-thickness: 3px;
+  }
+  article :global(a:focus-visible) {
+    border-radius: 2px;
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+  }
+  .logo a { color: #fff; }
+  .logo { display: flex; gap: 60px; margin: 30px 0 0 80px; }
+  .logo a { text-decoration: none; }
+  .logo a:hover { opacity: .8; }
+  @media screen and (max-width: 789px) {
+    main { margin-left: 20px; width: 350px; }
+    article { font-size: 1.2rem; }
+    article :global(h1) { font-size: 2.1rem; }
+    article :global(h2) { font-size: 1.8rem; }
+    article :global(p) { width: 380px; }
+    .logo { gap: 20px; margin-left: 5px; }
+    .logo img { width: 150px; }
+  }
+</style>

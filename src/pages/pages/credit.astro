@@ -46,12 +46,21 @@ import Layout from "../../layouts/Layout.astro";
     list-style: none;
   }
   a {
-    text-decoration: none;
-    color: #fff;
+    color: #123b5e;
     font-size: 2rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #123b5e;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.18em;
   }
   a:hover {
-    text-decoration: underline;
-    color: #ccc;
+    color: #071f34;
+    text-decoration-color: #071f34;
+    text-decoration-thickness: 3px;
+  }
+  a:focus-visible {
+    outline: 2px solid #123b5e;
+    outline-offset: 3px;
   }
 </style>
