@@ -1,4 +1,4 @@
-# Shicoku / Syu <img alt="GitHub Issues" src="https://img.shields.io/github/issues/shicoku/shicoku" /> <img alt="GitHub followers" src="https://img.shields.io/github/followers/shicoku.svg?style=social&label=Follow&maxAge=2592000" />
+# Shicoku / Syu
 
 <img alt="nakine" src="./public/img/nakine.png" width="50%">
 
@@ -17,7 +17,7 @@ https://shicoku.vercel.app/
 
 ## My Tech
 
-![My Tech](https://skillicons.dev/icons?i=html,css,js,nodejs,electron,astro,discordjs,typescript,cpp,python,vscode)
+![My Tech](https://skillicons.dev/icons?i=html,css,typescript,python,nodejs,bun,astro,nextjs,discordjs)
 
 ## Activity
 
