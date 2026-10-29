@@ -1,7 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPage.astro
 title: このページについて
-showLogos: true
 ---
 
 # このページについて
@@ -27,7 +26,7 @@ showLogos: true
 名前を引用する場合は、必ず下記のいずれか一方の XのID または リンクを併記してください。
 
 - [@Sck_Day](https://x.com/Sck_Day)
-- [@Shicoku_](https://x.com/Shicoku_)
+- [@Shicoku\_](https://x.com/Shicoku_)
 
 読み方は以下の通りとします。
 
@@ -50,6 +49,11 @@ showLogos: true
 - 余白
   - ロゴの周囲には適切な余白を確保してください。
   - 最低 **10px** 以上の余白を推奨します。
+
+<div class="logo" aria-label="ロゴのダウンロード">
+  <a href="/img/logo1.svg" download><img src="/img/logo1.svg" alt="Shicoku Logo" width="200" /></a>
+  <a href="/img/logo2.svg" download><img src="/img/logo2.svg" alt="Shicoku Logo (White)" width="200" /></a>
+</div>
 
 ## アイコン
 
