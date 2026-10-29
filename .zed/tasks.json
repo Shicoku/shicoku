@@ -12,4 +12,10 @@
     "args": ["run", "host"],
     "use_new_terminal": true,
   },
+  {
+    "label": "project",
+    "command": "npm",
+    "args": ["run", "project"],
+    "use_new_terminal": true,
+  },
 ]
