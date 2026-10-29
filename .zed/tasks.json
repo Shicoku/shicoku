@@ -5,17 +5,28 @@
     "args": ["run", "dev"],
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
+    "hide": "always"
   },
   {
     "label": "host",
     "command": "npm",
     "args": ["run", "host"],
     "use_new_terminal": true,
+    "hide": "always",
+    "save": "all"
+  },
+  {
+    "label": "format",
+    "command": "npm",
+    "args": ["run", "format"],
+    "use_new_terminal": true,
+    "hide": "always"
   },
   {
     "label": "project",
     "command": "npm",
     "args": ["run", "project"],
     "use_new_terminal": true,
-  },
+    "hide": "always"
+  }
 ]

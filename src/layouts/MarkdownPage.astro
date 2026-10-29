@@ -13,20 +13,39 @@ const pageClass = Astro.props.frontmatter?.pageClass;
 </Layout>
 
 <style>
-  main { margin: 100px 0 0 100px; color: #fff; }
-  article { width: 90%; font-size: 1.5rem; }
-  article :global(h1) { font-size: 2.5rem; }
-  article :global(h2) { margin-top: 50px; font-size: 2rem; }
-  article :global(p) { margin-top: -20px; }
-  article :global(ul) { margin-top: -5px; }
-  article :global(ul ul) { list-style: none; }
+  main {
+    margin: 100px 0 0 100px;
+    color: #fff;
+  }
+  article {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+  article :global(h1) {
+    font-size: 2.5rem;
+  }
+  article :global(h2) {
+    margin-top: 50px;
+    font-size: 2rem;
+  }
+  article :global(p) {
+    margin-top: -20px;
+  }
+  article :global(ul) {
+    margin-top: -5px;
+  }
+  article :global(ul ul) {
+    list-style: none;
+  }
   article :global(a) {
     color: #123b5e;
     text-decoration: underline;
     text-decoration-color: #123b5e;
     text-decoration-thickness: 2px;
     text-underline-offset: 0.18em;
-    transition: color 150ms ease, text-decoration-color 150ms ease;
+    transition:
+      color 150ms ease,
+      text-decoration-color 150ms ease;
   }
   article :global(a:hover) {
     color: #071f34;
@@ -38,40 +57,97 @@ const pageClass = Astro.props.frontmatter?.pageClass;
     outline: 2px solid #fff;
     outline-offset: 3px;
   }
-  article :global(.logo) { display: flex; gap: 60px; margin: 20px 0 30px 40px; }
-  article :global(.logo a) { color: #fff; text-decoration: none; }
-  article :global(.logo a:hover) { opacity: .8; }
+  article :global(.logo) {
+    display: flex;
+    gap: 60px;
+    margin: 20px 0 30px 40px;
+  }
+  article :global(.logo a) {
+    color: #fff;
+    text-decoration: none;
+  }
+  article :global(.logo a:hover) {
+    opacity: 0.8;
+  }
 
   main.privacy {
     margin-top: 80px;
     margin-left: 100px;
     color: #fff;
   }
-  article.privacy { width: auto; font-size: 1rem; }
-  article.privacy :global(h1) { font-size: 3rem; }
-  article.privacy :global(h2) { margin-top: 0.83em; font-size: 2.5rem; }
-  article.privacy :global(p) { margin-top: -15px; font-size: 1.5rem; }
-  article.privacy :global(ul) { margin-top: -15px; }
-  article.privacy :global(li) { font-size: 1.5rem; }
-  article.privacy :global(a) { font-weight: 700; }
+  article.privacy {
+    width: auto;
+    font-size: 1rem;
+  }
+  article.privacy :global(h1) {
+    font-size: 3rem;
+  }
+  article.privacy :global(h2) {
+    margin-top: 0.83em;
+    font-size: 2.5rem;
+  }
+  article.privacy :global(p) {
+    margin-top: -15px;
+    font-size: 1.5rem;
+  }
+  article.privacy :global(ul) {
+    margin-top: -15px;
+  }
+  article.privacy :global(li) {
+    font-size: 1.5rem;
+  }
+  article.privacy :global(a) {
+    font-weight: 700;
+  }
   article.privacy :global(a:focus-visible) {
     border-radius: 0;
     outline-color: #123b5e;
   }
-  article.privacy :global(.privacy-note) { color: #497cb6; }
+  article.privacy :global(.privacy-note) {
+    color: #497cb6;
+  }
 
   @media screen and (max-width: 789px) {
-    main { margin-left: 20px; width: 350px; }
-    article { font-size: 1.2rem; }
-    article :global(h1) { font-size: 2.1rem; }
-    article :global(h2) { font-size: 1.8rem; }
-    article :global(p) { width: 380px; }
-    article :global(.logo) { gap: 20px; margin-left: 5px; }
-    article :global(.logo img) { width: 150px; }
-    main.privacy { margin-left: 20px; width: 350px; }
-    article.privacy :global(h1) { font-size: 2.1rem; }
-    article.privacy :global(h2) { font-size: 1.8rem; }
-    article.privacy :global(p) { font-size: 1.2rem; width: 350px; }
-    article.privacy :global(li) { font-size: 1.2rem; width: 350px; }
+    main {
+      margin-left: 20px;
+      width: 350px;
+    }
+    article {
+      font-size: 1.2rem;
+    }
+    article :global(h1) {
+      font-size: 2.1rem;
+    }
+    article :global(h2) {
+      font-size: 1.8rem;
+    }
+    article :global(p) {
+      width: 380px;
+    }
+    article :global(.logo) {
+      gap: 20px;
+      margin-left: 5px;
+    }
+    article :global(.logo img) {
+      width: 150px;
+    }
+    main.privacy {
+      margin-left: 20px;
+      width: 350px;
+    }
+    article.privacy :global(h1) {
+      font-size: 2.1rem;
+    }
+    article.privacy :global(h2) {
+      font-size: 1.8rem;
+    }
+    article.privacy :global(p) {
+      font-size: 1.2rem;
+      width: 350px;
+    }
+    article.privacy :global(li) {
+      font-size: 1.2rem;
+      width: 350px;
+    }
   }
 </style>

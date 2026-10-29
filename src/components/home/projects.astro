@@ -5,13 +5,15 @@ import { projects } from "../../data/projects";
 ---
 
 <div class="projects-grid">
-  {projects.slice(0, 4).map((project) => (
-    <div>
-      <a href={`/projects/${project.slug}`}>
-        <Image src={project.image} alt={project.title} width={400} />
-      </a>
-    </div>
-  ))}
+  {
+    projects.slice(0, 4).map((project) => (
+      <div>
+        <a href={`/projects/${project.slug}`}>
+          <Image src={project.image} alt={project.title} width={400} />
+        </a>
+      </div>
+    ))
+  }
 </div>
 <div class="projects-footer">
   <a href="/projects" class="view-more-btn">View More</a>
