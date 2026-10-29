@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import Nakine from "/public/img/nakine.png";
 import Note from "../assets/links/note.svg";
 import Zenn from "../assets/links/zenn.svg";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -102,20 +103,6 @@ import Zenn from "../assets/links/zenn.svg";
 </footer>
 
 <style>
-  @font-face {
-    font-family: kt;
-    src: url(/font/kt.ttf);
-  }
-
-  @font-face {
-    font-family: boldnese;
-    src: url(/font/boldnese.ttf);
-  }
-
-  html {
-    font-family: kt;
-  }
-
   html,
   body {
     margin: 0;
@@ -187,22 +174,6 @@ import Zenn from "../assets/links/zenn.svg";
     font-weight: normal;
   }
 
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  footer p {
-    font-size: 1.5rem;
-  }
-  footer a {
-    text-decoration: none;
-    color: #cfcfcf;
-  }
-  footer a:hover {
-    text-decoration: underline;
-    opacity: 0.7;
-  }
 </style>
 
 <script src="https://kit.fontawesome.com/5047205f69.js" crossorigin="anonymous"
