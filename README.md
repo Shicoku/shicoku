@@ -1,6 +1,6 @@
-# Shicoku / Syu
+# Shicoku / 詩哭
 
-<img alt="nakine" src="./public/img/nakine.png" width="50%">
+<img src="./public/img/nakine.png" alt="Shicoku" width="220" />
 
 ## About me
 
@@ -11,9 +11,17 @@
   - Portuguese
 - University Student
 
-### Home Page Link
+[🌐 Portfolio](https://shicoku.vercel.app/) · [𝕏 X](https://x.com/Sck_Day) · [✉️ Contact](mailto:shicoku07@gmail.com)
 
-https://shicoku.vercel.app/
+## Selected projects
+
+| Project                                                            | What it does                                                                                                        |
+| :----------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| [ビルドカード生成器](https://hsr-builder.shicoku.workers.dev/)     | 『崩壊：スターレイル』のビルドカードを生成するツール。 [制作記事](https://zenn.dev/shicoku/articles/26805d5a1ef715) |
+| [StarRail Manager](https://www.npmjs.com/package/starrail-manager) | 『崩壊：スターレイル』のデータを取得する npm パッケージ。                                                           |
+| [音街ウナ総合学力試験](https://una-exam.vercel.app/)               | 響立うなうな学院の試験イベント公式サイト。                                                                          |
+
+他の制作物は [ポートフォリオ](https://shicoku.vercel.app/projects) にまとめています。
 
 ## My Tech
 
@@ -21,11 +29,14 @@ https://shicoku.vercel.app/
 
 ## Activity
 
-<a><img height=200 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api/top-langs/?username=Shicoku&theme=transparent&layout=compact" />
-<img height=165 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api?username=Shicoku&show_icons=true&theme=transparent" /></a>
+<a>
+  <img height=200 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api/top-langs/?username=Shicoku&theme=transparent&layout=compact" />
+  <img height=165 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api?username=Shicoku&show_icons=true&theme=transparent" />
+</a>
 
-## Contact
+## Find me
 
-[![gmail](https://skillicons.dev/icons?i=gmail)](mailto:shicoku07@gmail.com)
-[![Twitter](https://skillicons.dev/icons?i=twitter)](https://x.com/Sck_Day)
-[![misskey](https://skillicons.dev/icons?i=misskey)](https://misskey.io/@H2DH8K)
+- **Portfolio:** [shicoku.vercel.app](https://shicoku.vercel.app/)
+- **X:** [@Sck_Day](https://x.com/Sck_Day)
+- **Misskey:** [@H2DH8K](https://misskey.io/@H2DH8K)
+- **Email:** [shicoku07@gmail.com](mailto:shicoku07@gmail.com)
