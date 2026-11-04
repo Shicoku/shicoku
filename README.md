@@ -29,10 +29,8 @@
 
 ## Activity
 
-<a>
-  <img height=200 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api/top-langs/?username=Shicoku&theme=transparent&layout=compact" />
-  <img height=165 align="center" src="https://github-readme-stats-six-sand-27.vercel.app/api?username=Shicoku&show_icons=true&theme=transparent" />
-</a>
+[![GitHub Stats](https://github-stats-extended.vercel.app/api/top-langs?username=Shicoku&langs_count=4&theme=dark_github)](https://github-stats-extended.vercel.app/api/top-langs?username=Shicoku&langs_count=4&theme=dark_github)
+[![GitHub Stats](https://github-stats-extended.vercel.app/api?username=Shicoku&show_icons=true&include_all_commits=true&theme=dark_github)](https://github-stats-extended.vercel.app/api?username=Shicoku&show_icons=true&include_all_commits=true&theme=dark_github)
 
 ## Find me
 
